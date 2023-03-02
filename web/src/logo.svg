@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 396.85 396.85" width="396.85" height="396.85">
+  <defs/>
+  <g id="Canvas_1" stroke="none" fill="none" stroke-dasharray="none" stroke-opacity="1" fill-opacity="1">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_2">
+        <g id="Group_13">
+          <g id="Graphic_15">
+            <path d="M 148.74 168.52 L 148.59 168.52 L 144.07 168.52 L 147.68 171.7 L 144.46 183.02 L 163.34 183.02 L 167.45 168.52 Z" fill="#ffd52e"/>
+          </g>
+          <g id="Graphic_14">
+            <path d="M 132.55 224.98 L 151.41 224.98 L 157.59 203.29 L 157.71 202.83 L 161.11 190.87 L 142.38 190.87 Z" fill="#ffd52e"/>
+          </g>
+        </g>
+        <g id="Group_9">
+          <g id="Group_10">
+            <g id="Graphic_12">
+              <path d="M 98.18 168.53 L 82.03 180.49 L 55 180.49 L 55 168.53 Z" fill="#1678ff"/>
+            </g>
+            <g id="Graphic_11">
+              <path d="M 109.66 168.53 C 109.66 168.53 137.27 168.53 136.65 168.53 C 136.03 168.53 77.23 212.46 77.23 212.46 L 120.65 212.46 L 114.42 224.98 L 33.4 224.98 Z" fill="#1678ff"/>
+            </g>
+          </g>
+        </g>
+        <g id="Graphic_8">
+          <path d="M 217.41 168.52 L 199.77 168.52 L 180.08 190.87 L 161.19 190.87 L 157.79 202.83 L 181.95 202.83 L 189.47 224.98 L 208.99 224.98 L 196.9 192.74 Z" fill="#1678ff"/>
+        </g>
+        <g id="Group_5">
+          <g id="Graphic_7">
+            <path d="M 355.11 168.52 L 329.44 168.52 L 324.51 168.52 L 326.76 170.51 L 253.15 225.01 L 278.84 225.01 L 302.79 207.16 L 317.56 224.98 L 343.59 224.98 L 318.99 195.29 Z" fill="#1678ff"/>
+          </g>
+          <g id="Graphic_6">
+            <path d="M 304.22 177.46 L 296.81 168.52 L 270.74 168.52 L 288.09 189.41 Z" fill="#1678ff"/>
+          </g>
+        </g>
+        <g id="Graphic_4">
+          <path d="M 230.93 190.87 L 221.1 224.98 L 239.96 224.98 L 246.14 203.29 L 246.25 202.83 L 249.65 190.87 Z" fill="#1678ff"/>
+        </g>
+        <g id="Graphic_3">
+          <path d="M 237.29 168.52 L 237.13 168.52 L 232.62 168.52 L 236.23 171.7 L 233.01 183.02 L 251.88 183.02 L 256 168.52 Z" fill="#1678ff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

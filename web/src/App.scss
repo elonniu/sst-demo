@@ -1,0 +1,44 @@
+.app {
+  max-width: 1180px;
+  margin: auto;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px;
+
+    .logo img {
+      width: 100px;
+    }
+
+    .origin {
+      position: relative;
+      .earth-warp {
+        display: flex;
+        align-items: center;
+
+        .earth {
+          width: 18px;
+          margin-right: 10px;
+        }
+      }
+
+      .switch-panel {
+        position: absolute;
+        box-shadow: 0px 8px 24px 8px rgba(43, 47, 54, 0.04), 0px 6px 12px rgba(43, 47, 54, 0.04),
+          0px 4px 8px -8px rgba(43, 47, 54, 0.06);
+        width: 100px;
+        right: 0;
+        border: 1px solid #e9e9e9;
+        top: 25px;
+        border-radius: 4px;
+        padding: 2px;
+
+        .panel-item {
+          padding: 8px 16px;
+        }
+      }
+    }
+  }
+}

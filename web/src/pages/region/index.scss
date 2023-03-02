@@ -1,0 +1,42 @@
+.region-warp {
+  padding: 16px;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  .reload-warp {
+    display: flex;
+    justify-content: flex-end;
+    .reload {
+      padding: 6px 12px;
+      font-size: 12px;
+      color: #1678ff;
+      border: 1px solid #1678ff;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      width: fit-content;
+      text-align: center;
+    }
+  }
+
+  .region-table {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 8px 12px;
+      line-height: 32px;
+    }
+
+    th {
+    }
+
+    td {
+      border-bottom: 1px solid #fafafa;
+    }
+  }
+}

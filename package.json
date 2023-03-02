@@ -1,0 +1,32 @@
+{
+  "name": "sst-demo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sst dev",
+    "build": "sst build",
+    "remove": "sst remove",
+    "deploy": "sst deploy --stage prod",
+    "down": "sst remove --stage prod",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "sst": "^2.1.4",
+    "aws-cdk-lib": "2.62.2",
+    "constructs": "10.1.156",
+    "typescript": "^4.9.5",
+    "@tsconfig/node16": "^1.0.3",
+    "@types/uuid": "^9.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@slack/webhook": "^6.1.0",
+    "commander": "^10.0.0",
+    "expo-cli": "^6.3.2",
+    "uuid": "^9.0.0"
+  }
+}
