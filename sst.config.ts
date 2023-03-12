@@ -13,6 +13,10 @@ export default {
         };
     },
     stacks(app) {
+        app.setDefaultFunctionProps({
+            memorySize: 1024,
+            architecture: "arm_64"
+        });
         app.setDefaultRemovalPolicy("destroy");
         app.stack(Api);
         app.stack(Web);
