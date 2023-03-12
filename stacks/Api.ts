@@ -1,4 +1,4 @@
-import {Api as ApiV2, StackContext, Table} from "sst/constructs";
+import {Api as ApiV2, Function, StackContext, Table} from "sst/constructs";
 import {env} from "process";
 import {StartingPosition} from "aws-cdk-lib/aws-lambda";
 
@@ -9,6 +9,8 @@ export function Api({stack, app}: StackContext) {
         : 'elonniu.com';
 
     const domainName = `${app.stage}.api.demo.serverless.${app.region}.${env.HOSTED_ZONE}`;
+    // us: dev.api.demo.serverless.us-west-2.elonniu.com
+    // cn: dev.api.demo.serverless.cn-north-1.elonniu.cn
 
     const table = new Table(stack, "Counter", {
         fields: {
@@ -29,6 +31,18 @@ export function Api({stack, app}: StackContext) {
         },
     });
 
+    const clickFunction = new Function(
+        stack, 'ClickFunction',
+        {
+            bind: [table],
+            runtime: 'nodejs16.x',
+            handler: "packages/functions/src/counter/click.handler",
+            memorySize: 4028,
+            architecture: "arm_64",
+            timeout: 2,
+            reservedConcurrentExecutions: 2,
+        });
+
     const api = new ApiV2(stack, "Api", {
         customDomain: {
             domainName,
@@ -43,7 +57,11 @@ export function Api({stack, app}: StackContext) {
         routes: {
             "GET /": "packages/functions/src/lambda.handler",
 
-            "POST /counter": "packages/functions/src/counter/click.handler",
+            "POST /counter": {
+                cdk: {
+                    function: clickFunction
+                }
+            },
             "ANY /counter": "packages/functions/src/counter/get.handler",
         },
     });

@@ -9,12 +9,12 @@ export function JavaDocker({app, stack}: StackContext) {
     const dockerfile = path.resolve("resources/springboot-docker");
 
     // Create AWS Lambda function and push image to ECR
-    const fn = new Lambda.DockerImageFunction(stack, "tcl-function", {
+    const fn = new Lambda.DockerImageFunction(stack, "java-function", {
         code: Lambda.DockerImageCode.fromImageAsset(dockerfile),
         currentVersionOptions: {
             provisionedConcurrentExecutions: 1,
         },
-        memorySize: 8048,
+        memorySize: 4048,
         environment: {
             RUST_LOG: 'info',
             READINESS_CHECK_PATH: '/healthz',
@@ -36,7 +36,6 @@ export function JavaDocker({app, stack}: StackContext) {
 
     stack.addOutputs({
         url: `${api.customDomainUrl}java-docker/` || "",
-        url_pets: `${api.customDomainUrl}java-docker/pets` || "",
     });
 
     return {api};
