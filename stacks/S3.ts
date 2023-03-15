@@ -1,4 +1,5 @@
 import {Bucket, StackContext} from "sst/constructs";
+import {s3Url} from "../packages/lib/ResourceUrl";
 
 export function S3({stack, app}: StackContext) {
 
@@ -13,6 +14,10 @@ export function S3({stack, app}: StackContext) {
                 events: ["object_removed"],
             },
         },
+    });
+
+    stack.addOutputs({
+        url: s3Url(s3, app),
     });
 
     return {s3};

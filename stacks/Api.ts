@@ -33,6 +33,10 @@ export function Api({stack, app}: StackContext) {
             path: "v1"
         },
         defaults: {
+            throttle: {
+                rate: 10,
+                burst: 5,
+            },
             function: {
                 bind: [table],
             },

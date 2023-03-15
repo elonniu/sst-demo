@@ -1,10 +1,11 @@
 import {StackContext, Table} from "sst/constructs";
 import {StartingPosition} from "aws-cdk-lib/aws-lambda";
+import {ddbUrl} from "../packages/lib/ResourceUrl";
 
 export function Ddb({stack, app}: StackContext) {
 
     let consumers = {};
-    for (let i = 1; i < 30; i++) {
+    for (let i = 1; i <= 35; i++) {
         consumers[`consumer${i}`] = {
             cdk: {
                 eventSource: {
@@ -23,6 +24,10 @@ export function Ddb({stack, app}: StackContext) {
         primaryIndex: {partitionKey: "counter"},
         stream: "new_and_old_images",
         consumers: consumers,
+    });
+
+    stack.addOutputs({
+        url: ddbUrl(table.tableName, app),
     });
 
     return {table};

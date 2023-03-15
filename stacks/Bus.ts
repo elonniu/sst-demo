@@ -1,5 +1,6 @@
 import {EventBus, StackContext} from "sst/constructs";
 import * as events from "aws-cdk-lib/aws-events";
+import {busUrl} from "../packages/lib/ResourceUrl";
 
 export function Bus({stack, app}: StackContext) {
 
@@ -48,6 +49,9 @@ export function Bus({stack, app}: StackContext) {
         },
     });
 
+    stack.addOutputs({
+        url: busUrl(bus, app),
+    });
 
     return {bus};
 }
