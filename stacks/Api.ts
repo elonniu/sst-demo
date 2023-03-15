@@ -1,6 +1,6 @@
-import {Api as ApiV2, Function, StackContext, Table} from "sst/constructs";
+import {Api as ApiV2, Function, StackContext, use} from "sst/constructs";
 import {env} from "process";
-import {StartingPosition} from "aws-cdk-lib/aws-lambda";
+import {Ddb} from "./Ddb";
 
 export function Api({stack, app}: StackContext) {
 
@@ -12,24 +12,7 @@ export function Api({stack, app}: StackContext) {
     // us: dev.api.demo.serverless.us-west-2.elonniu.com
     // cn: dev.api.demo.serverless.cn-north-1.elonniu.cn
 
-    const table = new Table(stack, "Counter", {
-        fields: {
-            counter: "string",
-        },
-        primaryIndex: {partitionKey: "counter"},
-        stream: "new_and_old_images",
-        consumers: {
-            consumer1: {
-                cdk: {
-                    eventSource: {
-                        retryAttempts: 0,
-                        startingPosition: StartingPosition.LATEST,
-                    },
-                },
-                function: "packages/functions/src/ddb_trigger.handler",
-            },
-        },
-    });
+    const {table} = use(Ddb);
 
     const clickFunction = new Function(
         stack, 'ClickFunction',
