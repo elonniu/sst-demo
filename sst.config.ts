@@ -21,6 +21,7 @@ export default {
             architecture: "arm_64"
         });
         app.setDefaultRemovalPolicy("destroy");
+        app.stack(Conf);
         app.stack(Ddb);
         app.stack(Stream);
         app.stack(Bus);
@@ -28,6 +29,5 @@ export default {
         app.stack(Web);
         app.stack(S3);
         app.stack(JavaDocker);
-        app.stack(Conf);
     },
 } satisfies SSTConfig;
