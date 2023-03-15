@@ -9,9 +9,9 @@
   "devDependencies": {
     "@types/node": "^18.15.2",
     "@types/aws-lambda": "^8.10.111",
-    "sst": "^2.1.26"
+    "sst": "^2.1.31"
   },
   "dependencies": {
-    "sst": "^2.1.26"
+    "sst": "^2.1.31"
   }
 }

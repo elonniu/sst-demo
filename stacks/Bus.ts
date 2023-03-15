@@ -1,21 +1,8 @@
-import {Bucket, Cron, EventBus, Queue, StackContext} from "sst/constructs";
+import {EventBus, StackContext} from "sst/constructs";
 import * as events from "aws-cdk-lib/aws-events";
+import {busUrl} from "../packages/lib/ResourceUrl";
 
-export function Res({stack, app}: StackContext) {
-
-    const s3 = new Bucket(stack, "Bucket", {
-        notifications: {
-            myNotification1: {
-                function: "packages/functions/src/trigger.handler",
-                events: ["object_created"],
-            },
-            myNotification2: {
-                function: "packages/functions/src/trigger.handler",
-                events: ["object_removed"],
-            },
-        },
-    });
-
+export function Bus({stack, app}: StackContext) {
 
     const bus = new EventBus(stack, "EventBus", {
         cdk: {
@@ -62,16 +49,9 @@ export function Res({stack, app}: StackContext) {
         },
     });
 
-    // if (!app.local) {
-    //     new Cron(stack, "ApiHotCron", {
-    //         schedule: "rate(1 minute)",
-    //         job: "packages/functions/src/trigger.handler",
-    //     });
-    // }
-
-    const queue = new Queue(stack, "Queue", {
-        consumer: "packages/functions/src/trigger.handler",
+    stack.addOutputs({
+        url: busUrl(bus, app),
     });
 
-    return {s3, queue, bus};
+    return {bus};
 }
