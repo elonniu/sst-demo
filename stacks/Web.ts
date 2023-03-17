@@ -91,12 +91,12 @@ export function webCn(stack: Stack, app: App, domainName: string) {
             stdio: "inherit",
             env: {
                 ...env,
-                VITE_GRAPHQL_URL: api.customDomainUrl + "graphql",
+                VITE_GRAPHQL_URL: api.customDomainUrl,
             },
         });
     } catch (e) {
         throw new Error(
-            `There was a problem building the StaticSite: ` + e.message
+            `There was a problem building the StaticSite: ` + e
         );
     }
 

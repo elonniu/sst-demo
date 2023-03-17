@@ -12,7 +12,6 @@ export function s3Url(bucket: Bucket, app: App) {
 }
 
 export function ddbUrl(tableName: string, app: App) {
-
     const {region} = app;
     return `https://${region}.console.${awsDomain(app)}/dynamodbv2/home#table?initialTagKey=&name=${tableName}`;
 }
