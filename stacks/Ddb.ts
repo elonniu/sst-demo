@@ -5,7 +5,7 @@ import {ddbUrl} from "../packages/lib/ResourceUrl";
 export function Ddb({stack, app}: StackContext) {
 
     let consumers = {};
-    for (let i = 1; i <= 40; i++) {
+    for (let i = 1; i <= 1; i++) {
         consumers[`consumer${i}`] = {
             cdk: {
                 eventSource: {

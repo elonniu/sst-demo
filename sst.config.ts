@@ -12,7 +12,8 @@ export default {
     config(_input) {
         return {
             name: "sst-demo",
-            region: "us-west-2",
+            region: "cn-north-1",
+            profile: 'gcr'
         };
     },
     stacks(app) {

@@ -66,6 +66,8 @@ export function webGlobal(stack: Stack, app: App, domainName: string) {
 }
 
 export function webCn(stack: Stack, app: App, domainName: string) {
+    const api = use(Api)
+
     if (!env.IAM_CERTIFICATE_ID) {
         throw new Error("Must set IAM_CERTIFICATE_ID in china region.")
     }
@@ -94,7 +96,7 @@ export function webCn(stack: Stack, app: App, domainName: string) {
         });
     } catch (e) {
         throw new Error(
-            `There was a problem building the StaticSite.`
+            `There was a problem building the StaticSite: ` + e.message
         );
     }
 
@@ -197,6 +199,10 @@ export function webCn(stack: Stack, app: App, domainName: string) {
     new route53.CnameRecord(stack, "Cname", {
         zone: hostedZone,
         domainName: site.attrDomainName,
-        domainName
+        recordName: domainName
+    });
+
+    stack.addOutputs({
+        url: `https://${site.attrDomainName}`
     });
 }
