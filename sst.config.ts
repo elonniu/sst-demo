@@ -7,6 +7,7 @@ import {S3} from "./stacks/S3";
 import {Ddb} from "./stacks/Ddb";
 import {Stream} from "./stacks/Stream";
 import {Bus} from "./stacks/Bus";
+import {Sqs} from "./stacks/Sqs";
 
 export default {
     config(_input) {
@@ -24,11 +25,12 @@ export default {
         app.setDefaultRemovalPolicy("destroy");
         app.stack(Conf);
         app.stack(Ddb);
+        app.stack(Sqs);
         app.stack(Stream);
         app.stack(Bus);
+        app.stack(S3);
         app.stack(Api);
         app.stack(Web);
-        app.stack(S3);
         app.stack(JavaDocker);
     },
 } satisfies SSTConfig;
