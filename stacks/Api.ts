@@ -43,13 +43,12 @@ export function Api({stack, app}: StackContext) {
         },
         routes: {
             "GET /": "packages/functions/src/lambda.handler",
-
+            "ANY /counter": "packages/functions/src/counter/get.handler",
             "POST /counter": {
                 cdk: {
                     function: clickFunction
                 }
             },
-            "ANY /counter": "packages/functions/src/counter/get.handler",
         },
     });
 

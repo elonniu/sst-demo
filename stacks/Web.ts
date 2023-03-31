@@ -135,6 +135,10 @@ export function webCn(stack: Stack, app: App, domainName: string) {
         region: app.region.startsWith('cn') ? 'cn-north-1' : 'us-east-1',
     });
 
+    const bucketDomainName = app.region.startsWith('cn')
+        ? `${bucket.bucketName}.s3.${app.region}.amazonaws.com.cn`
+        : bucket.bucketDomainName;
+
     const originAccessIdentity = `origin-access-identity/cloudfront/${oai.originAccessIdentityId}`;
     const site = new cloudfront.CfnDistribution(stack, `Distribution`, {
 
@@ -150,7 +154,7 @@ export function webCn(stack: Stack, app: App, domainName: string) {
                     },
                     connectionAttempts: 3,
                     connectionTimeout: 10,
-                    domainName: bucket.bucketDomainName,
+                    domainName: bucketDomainName,
                     id: bucket.bucketName
                 }
             ],

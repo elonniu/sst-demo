@@ -30,7 +30,9 @@ export default {
         app.stack(Bus);
         app.stack(S3);
         app.stack(Api);
-        app.stack(Web);
         app.stack(JavaDocker);
+        if (app.stage !== 'dev') {
+            app.stack(Web);
+        }
     },
 } satisfies SSTConfig;
