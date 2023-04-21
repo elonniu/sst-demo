@@ -5,7 +5,7 @@ import {IncomingWebhook} from '@slack/webhook';
 export function feishu(json: Object) {
 
     if (!env.FEISHU_ID) {
-        return;
+        throw new Error(`FEISHU_ID not set`);
     }
 
     const text = JSON.stringify(json, null, "\t");

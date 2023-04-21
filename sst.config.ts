@@ -20,7 +20,10 @@ export default {
     stacks(app) {
         app.setDefaultFunctionProps({
             memorySize: 1024,
-            architecture: "arm_64"
+            architecture: "arm_64",
+            environment: {
+                FEISHU_ID: process.env.FEISHU_ID || ""
+            }
         });
         app.setDefaultRemovalPolicy("destroy");
         app.stack(Conf);

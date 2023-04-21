@@ -1,4 +1,5 @@
 import * as console from "console";
+import {feishu} from "../../lib/Notify";
 
 export async function handler(event: Object, context: Object, callback: CallableFunction) {
 
@@ -6,6 +7,8 @@ export async function handler(event: Object, context: Object, callback: Callable
         event,
         context
     }, null, "  "));
+
+    await feishu(event);
 
     return {}
 }
