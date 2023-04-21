@@ -8,6 +8,11 @@ export function stackUrl(stackId: string, app: App) {
 }
 
 export function s3Url(bucket: Bucket, app: App) {
+
+    if (app.region.startsWith('cn-')) {
+        return `https://console.${awsDomain(app)}/s3/buckets/${bucket.bucketName}?region=${app.region}&tab=objects`;
+    }
+
     return `https://s3.console.${awsDomain(app)}/s3/buckets/${bucket.bucketName}?region=${app.region}&tab=objects`;
 }
 
