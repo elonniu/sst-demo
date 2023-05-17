@@ -24,8 +24,8 @@ importers:
         specifier: 10.1.156
         version: 10.1.156
       sst:
-        specifier: 2.7.2
-        version: 2.7.2
+        specifier: 2.8.22
+        version: 2.8.22
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
@@ -36,8 +36,8 @@ importers:
         specifier: ^18.15.2
         version: 18.15.2
       sst:
-        specifier: 2.7.2
-        version: 2.7.2
+        specifier: 2.8.22
+        version: 2.8.22
     devDependencies:
       vitest:
         specifier: ^0.29.2
@@ -49,8 +49,8 @@ importers:
         specifier: ^2.1362.0
         version: 2.1362.0
       sst:
-        specifier: 2.7.2
-        version: 2.7.2
+        specifier: 2.8.22
+        version: 2.8.22
     devDependencies:
       '@types/aws-lambda':
         specifier: ^8.10.111
@@ -3705,8 +3705,8 @@ packages:
     dependencies:
       pako: 1.0.11
 
-  /kysely-codegen@0.9.0(kysely@0.23.5):
-    resolution: {integrity: sha512-VCkrEY0WPwObvT4LGJkwLn29DXmvwG2oAv94qa+yAXDPAWtYTfO8NQSqyeEiNHEWmuKI+Sl+ANSn63by2Xn1tw==}
+  /kysely-codegen@0.10.0(kysely@0.23.5):
+    resolution: {integrity: sha512-EV2v9yr9N9WrUPrURvFl5FPTtz39npsi1p1tLpJwEcFeOAKAPJruBpAASvnZWdqu5Pw/aaTssStE3qcI2sfxMQ==}
     hasBin: true
     peerDependencies:
       better-sqlite3: '>=7.6.2'
@@ -3727,8 +3727,8 @@ packages:
       micromatch: 4.0.5
       minimist: 1.2.8
 
-  /kysely-data-api@0.2.0(@aws-sdk/client-rds-data@3.287.0)(kysely@0.23.5):
-    resolution: {integrity: sha512-Jkuqoxs8XInYeUnKDFKraA1lmuW8flY5hse59EmFIKbWDv0diRjkthCrc21egEwpfqVmLYq0/zj+SWWrH8a0hw==}
+  /kysely-data-api@0.2.1(@aws-sdk/client-rds-data@3.287.0)(kysely@0.23.5):
+    resolution: {integrity: sha512-KmASvF1gmjVqyU9WOUXhCQlv29ofR+xc2DhjaIomz1+Bjd/VtR2/3g4ZuXwG1L4lWGKxMuo5iOvK3XyPbB4LdQ==}
     peerDependencies:
       '@aws-sdk/client-rds-data': 3.x
       kysely: 0.x
@@ -4579,8 +4579,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /sst@2.7.2:
-    resolution: {integrity: sha512-T7v7lvMUWy6G2o98H77JD8EWvAgvrDE5docIGKLbDdxzhjdYeTG8Cni2xKWc4FzFB1BsuPEJ4GlZb3CeglHlMQ==}
+  /sst@2.8.22:
+    resolution: {integrity: sha512-nvQ+Cgg7RofXU1Dsq8x5/UCV2ltmnNIP8nKgq+mQ606J/gbfuQGh3BPzjeRnb06B6aI/bZxGT5Qua5pQJibnyw==}
     hasBin: true
     peerDependencies:
       '@sls-next/lambda-at-edge': ^3.7.0
@@ -4636,8 +4636,8 @@ packages:
       ink: 4.0.0(react@18.2.0)
       ink-spinner: 5.0.0(ink@4.0.0)(react@18.2.0)
       kysely: 0.23.5
-      kysely-codegen: 0.9.0(kysely@0.23.5)
-      kysely-data-api: 0.2.0(@aws-sdk/client-rds-data@3.287.0)(kysely@0.23.5)
+      kysely-codegen: 0.10.0(kysely@0.23.5)
+      kysely-data-api: 0.2.1(@aws-sdk/client-rds-data@3.287.0)(kysely@0.23.5)
       minimatch: 6.2.0
       openid-client: 5.4.0
       ora: 6.1.2

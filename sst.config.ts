@@ -14,6 +14,7 @@ export default {
         return {
             name: "sst-demo",
             region: "cn-north-1",
+            // region: "ap-southeast-1",
             profile: 'gcr'
         };
     },
@@ -33,7 +34,7 @@ export default {
         app.stack(Bus);
         app.stack(S3);
         app.stack(Api);
-        app.stack(JavaDocker);
+        // app.stack(JavaDocker);
         if (app.stage !== 'dev') {
             app.stack(Web);
         }

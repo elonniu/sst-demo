@@ -1,10 +1,9 @@
 import {DynamoDB} from "aws-sdk";
 import {Table} from "sst/node/table";
-import {APIGatewayProxyHandlerV2} from "aws-lambda";
 
 const dynamoDb = new DynamoDB.DocumentClient();
 
-export const handler: APIGatewayProxyHandlerV2 = async (event) => {
+export async function handler(event: Object, context: Object) {
 
     const getParams = {
         TableName: Table.Counter.tableName,
@@ -28,7 +27,11 @@ export const handler: APIGatewayProxyHandlerV2 = async (event) => {
         },
     };
 
-    await dynamoDb.update(putParams).promise();
+    try {
+        await dynamoDb.update(putParams).promise();
+    } catch (e) {
+
+    }
 
     return {
         statusCode: 200,

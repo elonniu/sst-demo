@@ -7,8 +7,7 @@
     "dev": "sst dev",
     "build": "sst build",
     "remove": "sst remove",
-    "deploy": "sst deploy --stage prod",
-    "down": "sst remove --stage prod",
+    "deploy": "sst deploy",
     "console": "sst console",
     "typecheck": "tsc --noEmit"
   },
@@ -17,7 +16,7 @@
     "@types/uuid": "^9.0.0",
     "aws-cdk-lib": "2.72.1",
     "constructs": "10.1.156",
-    "sst": "2.7.2",
+    "sst": "2.8.22",
     "typescript": "^4.9.5"
   },
   "workspaces": [
