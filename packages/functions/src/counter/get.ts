@@ -1,7 +1,6 @@
-import {DynamoDB} from "aws-sdk";
-
 import {APIGatewayProxyHandlerV2} from "aws-lambda";
 import {Table} from "sst/node/table";
+import {DynamoDB} from "aws-sdk";
 
 const dynamoDb = new DynamoDB.DocumentClient();
 export const handler: APIGatewayProxyHandlerV2 = async (event, context) => {

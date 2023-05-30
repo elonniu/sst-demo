@@ -42,7 +42,12 @@ export function Api({stack, app}: StackContext) {
             },
         },
         routes: {
-            "GET /": "packages/functions/src/lambda.handler",
+            "GET /": {
+                function: {
+                    handler: "packages/functions/src/lambda.handler",
+                    tracing: "active",
+                }
+            },
             "ANY /counter": "packages/functions/src/counter/get.handler",
             "POST /counter": {
                 cdk: {

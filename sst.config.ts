@@ -13,8 +13,7 @@ export default {
     config(_input) {
         return {
             name: "sst-demo",
-            region: "cn-north-1",
-            // region: "ap-southeast-1",
+            region: "cn-northwest-1",
             profile: 'gcr'
         };
     },
