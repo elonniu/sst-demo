@@ -14,6 +14,9 @@ importers:
       sst-helper:
         specifier: ^0.0.30
         version: 0.0.30
+      static-site-cn:
+        specifier: ^0.0.4
+        version: 0.0.4
       uuid:
         specifier: ^9.0.0
         version: 9.0.0
@@ -6194,6 +6197,10 @@ packages:
   /stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
     dev: true
+
+  /static-site-cn@0.0.4:
+    resolution: {integrity: sha512-RrFsE4UrXIBzDOZfLZSoKq7dBTcYzQWSzWKsz6E92/UM8BfB86vp0rYMXKx8InVlzI+l9VUUEIuCAid6ntiOfg==}
+    dev: false
 
   /statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
