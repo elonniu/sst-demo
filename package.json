@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "@slack/webhook": "^6.1.0",
-    "static-site-cn": "^0.0.4",
+    "static-site-cn": "^0.0.5",
     "sst-helper": "^0.0.30",
     "uuid": "^9.0.0"
   }

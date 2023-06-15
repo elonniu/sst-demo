@@ -15,8 +15,8 @@ importers:
         specifier: ^0.0.30
         version: 0.0.30
       static-site-cn:
-        specifier: ^0.0.4
-        version: 0.0.4
+        specifier: ^0.0.5
+        version: 0.0.5
       uuid:
         specifier: ^9.0.0
         version: 9.0.0
@@ -6198,8 +6198,8 @@ packages:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
     dev: true
 
-  /static-site-cn@0.0.4:
-    resolution: {integrity: sha512-RrFsE4UrXIBzDOZfLZSoKq7dBTcYzQWSzWKsz6E92/UM8BfB86vp0rYMXKx8InVlzI+l9VUUEIuCAid6ntiOfg==}
+  /static-site-cn@0.0.5:
+    resolution: {integrity: sha512-kE1XQLaFgY/sHGuQgHGasYRvJwaqye2I9POhSAQNb1DgfcXxPGN7BnK4SpXjLcPHlmH/0x+mnauAetIZiK+ZPQ==}
     dev: false
 
   /statuses@2.0.1:

@@ -22,6 +22,9 @@ export function Web({stack}: StackContext) {
 }
 
 export function webCn(stack: Stack, domainName: string) {
+
+    const api = use(Api)
+
     const site = new StaticSiteCn(stack, "Web", {
         path: "web",
         customDomain: {
@@ -31,6 +34,9 @@ export function webCn(stack: Stack, domainName: string) {
         },
         buildCommand: "npm i && npm run build",
         buildOutput: "build",
+        environment: {
+            API_URL: api.customDomainUrl || "",
+        },
     });
 
     stack.addOutputs({
