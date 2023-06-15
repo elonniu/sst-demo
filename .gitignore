@@ -16,3 +16,4 @@ node_modules
 
 cdk.context.json
 .sst.config.*.mjs
+*.log
