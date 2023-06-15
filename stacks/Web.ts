@@ -5,7 +5,6 @@ import * as acm from "aws-cdk-lib/aws-certificatemanager";
 import * as route53 from "aws-cdk-lib/aws-route53";
 import {Api} from "./Api";
 import {StaticSiteCn} from "static-site-cn";
-import console from "console";
 
 export function Web({stack}: StackContext) {
 
@@ -14,8 +13,6 @@ export function Web({stack}: StackContext) {
         : 'elonniu.com';
 
     const domainName = `${stack.stage}.demo.serverless.${env.HOSTED_ZONE}`;
-
-    console.log(domainName);
 
     if (stack.region.startsWith('cn') && stack.stage === 'prod') {
         return webCn(stack, domainName);

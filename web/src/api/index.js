@@ -1,11 +1,5 @@
 const getUrl = (path) => {
-    const isCn = +localStorage.getItem("isCn");
-
-    if (window.location.host.indexOf('localhost') > -1) {
-        return `https://prod.api.demo.serverless.elonniu.cn/v1/${path}`;
-    }
-
-    if (isCn) {
+    if (window.location.host.indexOf('.cn') > -1) {
         return `https://prod.api.demo.serverless.elonniu.cn/v1/${path}`;
     }
 
