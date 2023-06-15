@@ -14,7 +14,7 @@ export default {
         return {
             name: "sst-demo",
             region: "cn-northwest-1",
-            profile: 'gcr'
+            profile: _input.region?.startsWith("cn") ? "gcr" : "default",
         };
     },
     stacks(app) {
