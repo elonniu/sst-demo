@@ -34,6 +34,8 @@ export default {
         app.stack(S3);
         app.stack(Api);
         // app.stack(JavaDocker);
-        !app.local && app.stack(Web);
+        if (!app.local) {
+            app.stack(Web);
+        }
     },
 } satisfies SSTConfig;

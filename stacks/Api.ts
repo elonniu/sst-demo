@@ -8,9 +8,9 @@ export function Api({stack, app}: StackContext) {
         ? 'elonniu.cn'
         : 'elonniu.com';
 
-    const domainName = `${app.stage}.api.demo.serverless.${app.region}.${env.HOSTED_ZONE}`;
-    // us: dev.api.demo.serverless.us-west-2.elonniu.com
-    // cn: dev.api.demo.serverless.cn-north-1.elonniu.cn
+    const domainName = `${app.stage}.api.demo.serverless.${env.HOSTED_ZONE}`;
+    // us: dev.api.demo.serverless.elonniu.com
+    // cn: dev.api.demo.serverless.elonniu.cn
 
     const {table} = use(Ddb);
 
