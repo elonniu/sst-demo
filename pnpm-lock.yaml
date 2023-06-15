@@ -12,11 +12,11 @@ importers:
         specifier: ^6.1.0
         version: 6.1.0
       sst-helper:
-        specifier: ^0.0.30
-        version: 0.0.30
+        specifier: ^0.0.51
+        version: 0.0.51
       static-site-cn:
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.0.10
+        version: 0.0.10
       uuid:
         specifier: ^9.0.0
         version: 9.0.0
@@ -6087,8 +6087,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /sst-helper@0.0.30:
-    resolution: {integrity: sha512-08QB833x8tFGm9Zh97VEJjPAJtM5+GyGQwYzoZxCLgXUoxtXm9Jr7iICgSC0+81GBAu3FcdPYKYPXali3+5OKw==}
+  /sst-helper@0.0.51:
+    resolution: {integrity: sha512-NIBg+CcFGOefncZbDJDf7FBfvVkZNzYOelETdWAYxa0ssYEY+gCa1lTaN95oKE/Rci7TbVghp/LVd3YtrnljRA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dependencies:
       '@slack/webhook': 6.1.0
@@ -6198,8 +6198,10 @@ packages:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
     dev: true
 
-  /static-site-cn@0.0.5:
-    resolution: {integrity: sha512-kE1XQLaFgY/sHGuQgHGasYRvJwaqye2I9POhSAQNb1DgfcXxPGN7BnK4SpXjLcPHlmH/0x+mnauAetIZiK+ZPQ==}
+  /static-site-cn@0.0.10:
+    resolution: {integrity: sha512-wUjhs/i5hgMnSJHFmVxO6E6cuopQKQ52+qI6iaxDbB1UI05cbskzAO1sWThopQXiNVWaIBV6AEZm5W/igBRz/Q==}
+    dependencies:
+      lodash-es: 4.17.21
     dev: false
 
   /statuses@2.0.1:
