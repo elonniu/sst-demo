@@ -12,11 +12,11 @@ importers:
         specifier: ^6.1.0
         version: 6.1.0
       sst-helper:
-        specifier: ^0.0.51
-        version: 0.0.51
+        specifier: 0.0.52
+        version: 0.0.52
       static-site-cn:
-        specifier: ^0.0.10
-        version: 0.0.10
+        specifier: ^0.0.14
+        version: 0.0.14
       uuid:
         specifier: ^9.0.0
         version: 9.0.0
@@ -34,8 +34,8 @@ importers:
         specifier: 10.1.156
         version: 10.1.156
       sst:
-        specifier: 2.13.2
-        version: 2.13.2
+        specifier: 2.13.6
+        version: 2.13.6
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
@@ -46,8 +46,8 @@ importers:
         specifier: ^18.15.2
         version: 18.15.2
       sst:
-        specifier: 2.13.2
-        version: 2.13.2
+        specifier: 2.13.6
+        version: 2.13.6
     devDependencies:
       vitest:
         specifier: ^0.29.2
@@ -68,8 +68,8 @@ importers:
         specifier: ^1.1.8
         version: 1.1.8
       sst:
-        specifier: 2.13.2
-        version: 2.13.2
+        specifier: 2.13.6
+        version: 2.13.6
     devDependencies:
       '@types/aws-lambda':
         specifier: ^8.10.111
@@ -6087,8 +6087,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /sst-helper@0.0.51:
-    resolution: {integrity: sha512-NIBg+CcFGOefncZbDJDf7FBfvVkZNzYOelETdWAYxa0ssYEY+gCa1lTaN95oKE/Rci7TbVghp/LVd3YtrnljRA==}
+  /sst-helper@0.0.52:
+    resolution: {integrity: sha512-n508j6/MgHbC7LiJ0TfI7KBil0R3CpBkWRTSrloA3Hc4Dm6vVCPT0/fn8zFBAYcx2ozY7vCg2hPbLhlevzgZgg==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dependencies:
       '@slack/webhook': 6.1.0
@@ -6097,8 +6097,8 @@ packages:
       - debug
     dev: false
 
-  /sst@2.13.2:
-    resolution: {integrity: sha512-KcvOowyy2XBNkBqzXouMOEAOHUoescDm/lo0kN8G6Tchhm/AXOrE1NqorPC1FMyuR1C2Ab5mCNoaqkHdvJLmIg==}
+  /sst@2.13.6:
+    resolution: {integrity: sha512-FNJBy9U0OzwNlROrhYh497VI7/X278K4/sIp2tL6oZDwFRLgvtOgU6PN1hImNrzyzhDcZJTRGCPKEe4vo9YsVQ==}
     hasBin: true
     peerDependencies:
       '@sls-next/lambda-at-edge': ^3.7.0
@@ -6198,8 +6198,8 @@ packages:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
     dev: true
 
-  /static-site-cn@0.0.10:
-    resolution: {integrity: sha512-wUjhs/i5hgMnSJHFmVxO6E6cuopQKQ52+qI6iaxDbB1UI05cbskzAO1sWThopQXiNVWaIBV6AEZm5W/igBRz/Q==}
+  /static-site-cn@0.0.14:
+    resolution: {integrity: sha512-aPorGFeoRiKxrLTON0cVF5mDsW56TZxnCFOAEUef+FA1VpXvlcDLYTf7gqUaXcIOpqweOzxcAvARKzIZbVP0pw==}
     dependencies:
       lodash-es: 4.17.21
     dev: false
