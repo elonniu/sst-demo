@@ -32,8 +32,8 @@ export function webCn(stack: Stack, domainName: string) {
             iamCertificateId: env.IAM_CERTIFICATE_ID || "",
             hostedZone: env.HOSTED_ZONE,
         },
-        buildCommand: "npm i && npm run build",
-        buildOutput: "build",
+        // buildCommand: "npm i && npm run build",
+        // buildOutput: "build",
         environment: {
             API_URL: api.customDomainUrl || "",
         },

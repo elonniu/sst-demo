@@ -18,7 +18,6 @@ export function Api({stack, app}: StackContext) {
         stack, 'ClickFunction',
         {
             bind: [table],
-            runtime: 'nodejs16.x',
             handler: "packages/functions/src/counter/click.handler",
             memorySize: 4028,
             architecture: "arm_64",
@@ -54,11 +53,25 @@ export function Api({stack, app}: StackContext) {
                     function: clickFunction
                 }
             },
+            "GET /golang": {
+                function: {
+                    handler: "resources/golang/main.go",
+                    runtime: "go1.x",
+                }
+            },
+            "GET /python": {
+                function: {
+                    handler: "resources/python/lambda.handler",
+                    runtime: "python3.10",
+                }
+            },
         },
     });
 
     stack.addOutputs({
-        url: api.customDomainUrl || "",
+        nodeJs: api.customDomainUrl || "",
+        golang: `${api.customDomainUrl}golang`,
+        python: `${api.customDomainUrl}python`
     });
 
     return api;

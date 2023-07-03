@@ -21,6 +21,7 @@ export default {
         app.setDefaultFunctionProps({
             memorySize: 1024,
             architecture: "arm_64",
+            runtime: 'nodejs18.x',
             environment: {
                 FEISHU_ID: process.env.FEISHU_ID || ""
             }
