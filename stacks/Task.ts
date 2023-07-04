@@ -8,9 +8,8 @@ export function Task({stack, app}: StackContext) {
             function: {
                 handler: "resources/golang/cron/main.go",
                 runtime: "go1.x",
+                architecture: "x86_64",
             }
         },
     });
 }
-
-

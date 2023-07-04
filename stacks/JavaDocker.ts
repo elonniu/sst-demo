@@ -2,6 +2,7 @@ import {Api as ApiV2, StackContext, use} from "sst/constructs";
 import * as Lambda from "aws-cdk-lib/aws-lambda";
 import path from "path";
 import {Api} from "./Api";
+import {Architecture} from "aws-cdk-lib/aws-lambda";
 
 export function JavaDocker({app, stack}: StackContext) {
 
@@ -12,6 +13,7 @@ export function JavaDocker({app, stack}: StackContext) {
     const fn = new Lambda.DockerImageFunction(stack, "java-function", {
         code: Lambda.DockerImageCode.fromImageAsset(dockerfile),
         memorySize: 4048,
+        architecture: Architecture.X86_64,
         environment: {
             RUST_LOG: 'info',
             READINESS_CHECK_PATH: '/healthz',

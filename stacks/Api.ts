@@ -57,6 +57,7 @@ export function Api({stack, app}: StackContext) {
                 function: {
                     handler: "resources/golang/main.go",
                     runtime: "go1.x",
+                    architecture: "x86_64",
                 }
             },
             "GET /python": {

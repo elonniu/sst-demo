@@ -11,15 +11,6 @@ export function Bus({stack, app}: StackContext) {
             ),
         },
         rules: {
-            // cloudformation: {
-            //     pattern: {
-            //         source: ["aws.cloudformation"],
-            //         detailType: ["CloudFormation Stack Status Change"],
-            //     },
-            //     targets: {
-            //         myTarget1: "functions/eda/event_cloudformation.handler",
-            //     },
-            // },
             s3: {
                 pattern: {
                     source: ["aws.s3"],
