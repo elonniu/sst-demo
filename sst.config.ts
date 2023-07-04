@@ -1,13 +1,14 @@
 import {SSTConfig} from "sst";
 import {Api} from "./stacks/Api";
 import {Web} from "./stacks/Web";
-// import {JavaDocker} from "./stacks/JavaDocker";
+import {JavaDocker} from "./stacks/JavaDocker";
 import {Conf} from "./stacks/Conf";
 import {S3} from "./stacks/S3";
 import {Ddb} from "./stacks/Ddb";
 import {Stream} from "./stacks/Stream";
 import {Bus} from "./stacks/Bus";
 import {Sqs} from "./stacks/Sqs";
+import {Task} from "./stacks/Task";
 
 export default {
     config(_input) {
@@ -34,7 +35,8 @@ export default {
         app.stack(Bus);
         app.stack(S3);
         app.stack(Api);
-        // app.stack(JavaDocker);
+        app.stack(Task);
+        app.stack(JavaDocker);
         if (!app.local) {
             app.stack(Web);
         }
