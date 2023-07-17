@@ -47,4 +47,5 @@ export async function handler(event: Object, context: Object) {
             count: 0,
         }),
     };
+
 }

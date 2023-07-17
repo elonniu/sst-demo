@@ -66,13 +66,18 @@ export function Api({stack, app}: StackContext) {
                     runtime: "python3.9",
                 }
             },
+            "GET /proxy": {
+                type: "url",
+                url: "https://www.aws.com",
+            },
         },
     });
 
     stack.addOutputs({
         nodeJs: api.customDomainUrl || "",
         golang: `${api.customDomainUrl}golang`,
-        python: `${api.customDomainUrl}python`
+        python: `${api.customDomainUrl}python`,
+        proxy: `${api.customDomainUrl}proxy`
     });
 
     return api;
