@@ -6,5 +6,6 @@ export const handler = ApiHandler(async (event, context) => {
 
     return {
         body: `Hello world. The time is ${Time.now()}`,
+        event
     };
 });

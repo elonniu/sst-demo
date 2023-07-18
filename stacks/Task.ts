@@ -4,6 +4,7 @@ export function Task({stack, app}: StackContext) {
 
     new Cron(stack, "CronJob", {
         schedule: "rate(1 minute)",
+        enabled: app.local,
         job: {
             function: {
                 handler: "resources/golang/cron/main.go",
@@ -12,4 +13,5 @@ export function Task({stack, app}: StackContext) {
             }
         },
     });
+
 }
