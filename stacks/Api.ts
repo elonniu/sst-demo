@@ -60,12 +60,12 @@ export function Api({stack, app}: StackContext) {
                     architecture: "x86_64",
                 }
             },
-            // "GET /python": {
-            //     function: {
-            //         handler: "resources/python/lambda.handler",
-            //         runtime: "python3.10",
-            //     }
-            // },
+            "GET /python": {
+                function: {
+                    handler: "resources/python/lambda.handler",
+                    runtime: "python3.9",
+                }
+            },
             "GET /proxy": {
                 type: "url",
                 url: "https://www.aws.com",
