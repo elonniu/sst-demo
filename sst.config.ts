@@ -38,7 +38,7 @@ export default {
         app.stack(Task);
         app.stack(JavaDocker);
         if (!app.local) {
-            // app.stack(Web);
+            app.stack(Web);
         }
     },
 } satisfies SSTConfig;

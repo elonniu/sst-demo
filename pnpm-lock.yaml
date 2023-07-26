@@ -34,8 +34,8 @@ importers:
         specifier: 10.1.156
         version: 10.1.156
       sst:
-        specifier: 2.22.2
-        version: 2.22.2
+        specifier: 2.22.6
+        version: 2.22.6
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
@@ -46,8 +46,8 @@ importers:
         specifier: ^18.15.2
         version: 18.15.2
       sst:
-        specifier: 2.22.2
-        version: 2.22.2
+        specifier: 2.22.6
+        version: 2.22.6
     devDependencies:
       vitest:
         specifier: ^0.29.2
@@ -68,8 +68,8 @@ importers:
         specifier: ^1.1.8
         version: 1.1.8
       sst:
-        specifier: 2.22.2
-        version: 2.22.2
+        specifier: 2.22.6
+        version: 2.22.6
     devDependencies:
       '@types/aws-lambda':
         specifier: ^8.10.111
@@ -6093,8 +6093,8 @@ packages:
       - debug
     dev: false
 
-  /sst@2.22.2:
-    resolution: {integrity: sha512-k2rMmkjfQhe4jT8vdLK77oUGuJSCMnbaxFc7LLqwQOL2nPSDBBY1xYcD9PQWJ82iludlI50VTDEdCBTnuz0kag==}
+  /sst@2.22.6:
+    resolution: {integrity: sha512-zoaU1oEcKxs0c/85hsRWbKov3OPnmanRKxoLMsJ/8MxVwja6ypn3uSdTbMoSFyq6zzbhtkrT2RRRZdHAY85EVQ==}
     hasBin: true
     peerDependencies:
       '@sls-next/lambda-at-edge': ^3.7.0

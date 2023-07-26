@@ -63,7 +63,7 @@ export function Api({stack, app}: StackContext) {
             "GET /python": {
                 function: {
                     handler: "resources/python/lambda.handler",
-                    runtime: "python3.9",
+                    runtime: "python3.10",
                 }
             },
             "GET /proxy": {
