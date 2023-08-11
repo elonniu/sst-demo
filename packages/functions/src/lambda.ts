@@ -5,7 +5,11 @@ export const handler = ApiHandler(async (event, context) => {
     console.log(JSON.stringify(event, null, "  "));
 
     return {
-        body: `Hello world. The time is ${Time.now()}`,
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+        },
+        body: `Hello world2. The time is ${Time.now()}`,
         event
     };
 });

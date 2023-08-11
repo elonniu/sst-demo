@@ -5,7 +5,7 @@ export function Stream({stack, app}: StackContext) {
 
     const stream = new KinesisStream(stack, "Stream", {
         consumers: {
-            consumer1: "packages/functions/src/trigger.handler"
+            consumer1: "packages/functions/src/eda/trigger1.handler"
         },
     });
 

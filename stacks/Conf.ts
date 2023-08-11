@@ -20,7 +20,7 @@ export function Conf({stack, app}: StackContext) {
             bind: [conf, STRIPE_KEY],
             functionName: `${app.stage}-${app.name}-conf-api`,
             runtime: 'nodejs18.x',
-            handler: "packages/functions/src/conf_api.handler",
+            handler: "packages/functions/src/conf.handler",
         });
 
     const api = new Api(stack, "config-api", {

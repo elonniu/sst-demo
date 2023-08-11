@@ -1,6 +1,9 @@
 import {Api as ApiV2, Function, StackContext, use} from "sst/constructs";
 import {env} from "process";
 import {Ddb} from "./Ddb";
+import {Sqs} from "./Sqs";
+import {Sns} from "./Sns";
+import {apiUrl} from "sst-helper";
 
 export function Api({stack, app}: StackContext) {
 
@@ -13,6 +16,8 @@ export function Api({stack, app}: StackContext) {
     // cn: dev.api.demo.serverless.elonniu.cn
 
     const {table} = use(Ddb);
+    const {queue} = use(Sqs);
+    const {topic} = use(Sns);
 
     const clickFunction = new Function(
         stack, 'ClickFunction',
@@ -26,6 +31,9 @@ export function Api({stack, app}: StackContext) {
         });
 
     const api = new ApiV2(stack, "Api", {
+        cors: {
+            allowMethods: ["ANY"],
+        },
         customDomain: {
             domainName,
             hostedZone: env.HOSTED_ZONE,
@@ -37,7 +45,7 @@ export function Api({stack, app}: StackContext) {
                 burst: 5,
             },
             function: {
-                bind: [table],
+                bind: [table, queue, topic]
             },
         },
         routes: {
@@ -70,6 +78,8 @@ export function Api({stack, app}: StackContext) {
                 type: "url",
                 url: "https://www.aws.com",
             },
+            "GET /sqs": "packages/functions/src/sqs.handler",
+            "GET /sns": "packages/functions/src/sns.handler",
         },
     });
 
@@ -77,7 +87,8 @@ export function Api({stack, app}: StackContext) {
         nodeJs: api.customDomainUrl || "",
         golang: `${api.customDomainUrl}golang`,
         python: `${api.customDomainUrl}python`,
-        proxy: `${api.customDomainUrl}proxy`
+        proxy: `${api.customDomainUrl}proxy`,
+        api: apiUrl(api, stack)
     });
 
     return api;

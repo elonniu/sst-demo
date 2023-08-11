@@ -17,7 +17,7 @@ export function Bus({stack, app}: StackContext) {
                     detailType: ["Object Created", "Object Deleted"]
                 },
                 targets: {
-                    function: "packages/functions/src/trigger.handler",
+                    function: "packages/functions/src/eda/trigger1.handler",
                 },
             },
             ec2: {
@@ -26,7 +26,7 @@ export function Bus({stack, app}: StackContext) {
                     detailType: ["EC2 Instance State-change Notification"],
                 },
                 targets: {
-                    myTarget1: "packages/functions/src/trigger.handler",
+                    myTarget1: "packages/functions/src/eda/trigger1.handler",
                 },
             },
             cloud_trail: {
@@ -34,7 +34,7 @@ export function Bus({stack, app}: StackContext) {
                     source: ["aws.cloudtrail"],
                 },
                 targets: {
-                    myTarget1: "packages/functions/src/trigger.handler",
+                    myTarget1: "packages/functions/src/eda/trigger1.handler",
                 },
             },
         },

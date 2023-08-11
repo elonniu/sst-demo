@@ -8,6 +8,7 @@ import {Ddb} from "./stacks/Ddb";
 import {Stream} from "./stacks/Stream";
 import {Bus} from "./stacks/Bus";
 import {Sqs} from "./stacks/Sqs";
+import {Sns} from "./stacks/Sns";
 import {Task} from "./stacks/Task";
 
 export default {
@@ -31,11 +32,12 @@ export default {
         app.stack(Conf);
         app.stack(Ddb);
         app.stack(Sqs);
+        app.stack(Sns);
         app.stack(Stream);
         app.stack(Bus);
         app.stack(S3);
-        app.stack(Api);
         app.stack(Task);
+        app.stack(Api);
         app.stack(JavaDocker);
         if (!app.local) {
             app.stack(Web);

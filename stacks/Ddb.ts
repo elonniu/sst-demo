@@ -18,7 +18,7 @@ export function Ddb({stack, app}: StackContext) {
                         startingPosition: StartingPosition.LATEST,
                     },
                 },
-                function: "packages/functions/src/ddb_trigger.handler",
+                function: "packages/functions/src/eda/ddb_trigger.handler",
             }
         },
     });

@@ -16,13 +16,16 @@
     "@types/uuid": "^9.0.0",
     "aws-cdk-lib": "2.84.0",
     "constructs": "10.1.156",
-    "sst": "2.22.6",
+    "sst": "2.23.15",
     "typescript": "^4.9.5"
   },
   "workspaces": [
     "packages/*"
   ],
   "dependencies": {
+    "@aws-cdk/aws-lambda-event-sources": "^1.204.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.204.0",
+    "@aws-cdk/aws-sqs": "^1.204.0",
     "@slack/webhook": "^6.1.0",
     "sst-helper": "0.0.52",
     "static-site-cn": "^0.0.14",

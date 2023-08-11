@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@aws-cdk/aws-lambda-event-sources':
+        specifier: ^1.204.0
+        version: 1.204.0(@aws-cdk/aws-apigateway@1.204.0)(@aws-cdk/aws-dynamodb@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kinesis@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-s3-notifications@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-secretsmanager@1.204.0)(@aws-cdk/aws-sns-subscriptions@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sns-subscriptions':
+        specifier: ^1.204.0
+        version: 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sqs':
+        specifier: ^1.204.0
+        version: 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
       '@slack/webhook':
         specifier: ^6.1.0
         version: 6.1.0
@@ -34,8 +43,8 @@ importers:
         specifier: 10.1.156
         version: 10.1.156
       sst:
-        specifier: 2.22.6
-        version: 2.22.6
+        specifier: 2.23.15
+        version: 2.23.15
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
@@ -46,8 +55,8 @@ importers:
         specifier: ^18.15.2
         version: 18.15.2
       sst:
-        specifier: 2.22.6
-        version: 2.22.6
+        specifier: 2.23.15
+        version: 2.23.15
     devDependencies:
       vitest:
         specifier: ^0.29.2
@@ -55,6 +64,12 @@ importers:
 
   packages/functions:
     dependencies:
+      '@aws-sdk/client-sns':
+        specifier: ^3.379.1
+        version: 3.379.1
+      '@aws-sdk/client-sqs':
+        specifier: ^3.379.1
+        version: 3.379.1
       aws-sdk:
         specifier: ^2.1362.0
         version: 2.1362.0
@@ -68,8 +83,8 @@ importers:
         specifier: ^1.1.8
         version: 1.1.8
       sst:
-        specifier: 2.22.6
-        version: 2.22.6
+        specifier: 2.23.15
+        version: 2.23.15
     devDependencies:
       '@types/aws-lambda':
         specifier: ^8.10.111
@@ -95,6 +110,80 @@ packages:
 
   /@aws-cdk/asset-node-proxy-agent-v5@2.0.155:
     resolution: {integrity: sha512-Q+Ny25hUPINlBbS6lmbUr4m6Tr6ToEJBla7sXA3FO3JUD0Z69ddcgbhuEBF8Rh1a2xmPONm89eX77kwK2fb4vQ==}
+
+  /@aws-cdk/assets@1.204.0(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-rY9YHZ3gUWr+dLwTwSUWYbIfk/AXy4JZRkhLbunrtzjQhH+QMm/2IWIebfBGu+A5AlVRaFbRLonReuGP5WZoUQ==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-acmpca@1.204.0(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-2zyuQZwynwkz2qiuFDp088tglWXKX3q7saWRDqeuq2n2HE6PGuQRjd4zjl9nDGUVxQYtzzXyEuPyaEta8fg9lQ==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-apigateway@1.204.0(@aws-cdk/aws-certificatemanager@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-cognito@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-elasticloadbalancingv2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-stepfunctions@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-uVK309Ltdq/Q0w0tREtIIJYKAeevKwU/oqVMy+PKis1+bSEesN64hIPAd+qqBuChrzCdhEDtY9oiKGOTvM0Alg==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-certificatemanager': 1.204.0
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-cognito': 1.204.0
+      '@aws-cdk/aws-ec2': 1.204.0
+      '@aws-cdk/aws-elasticloadbalancingv2': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/aws-logs': 1.204.0
+      '@aws-cdk/aws-s3': 1.204.0
+      '@aws-cdk/aws-s3-assets': 1.204.0
+      '@aws-cdk/aws-stepfunctions': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-certificatemanager': 1.204.0(@aws-cdk/aws-acmpca@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-route53@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-cognito': 1.204.0(@aws-cdk/aws-certificatemanager@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/custom-resources@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-ec2': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-ssm@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-elasticloadbalancingv2': 1.204.0(@aws-cdk/aws-certificatemanager@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-route53@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-logs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3-assets': 1.204.0(@aws-cdk/assets@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-stepfunctions': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      constructs: 10.1.156
+    dev: false
 
   /@aws-cdk/aws-apigatewayv2-alpha@2.84.0-alpha.0(aws-cdk-lib@2.84.0)(constructs@10.1.156):
     resolution: {integrity: sha512-Iom2VbAt9N6QXJqqjikcG6hHCaYsPIZdLy8gkMkQu/idmaQnGzZ7sNp4uRdLr4EmqtGJOSFxAM9jrGyBIEhYlw==}
@@ -130,15 +219,872 @@ packages:
       aws-cdk-lib: 2.84.0(constructs@10.1.156)
       constructs: 10.1.156
 
+  /@aws-cdk/aws-applicationautoscaling@1.204.0(@aws-cdk/aws-autoscaling-common@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-sEe2NODKUowJx2guM2SPfs/20gGdBq1C09M32b8c1im7K+PqQkHkE156nyz5Ml0hpsNeCZlRS17oKZ042aZevQ==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-autoscaling-common': 1.204.0
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-autoscaling-common': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-autoscaling-common@1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-P+PwbTaj28Eg9+/U9ZTXTh1gA7L9Z45GL+9xcEZvEqAkJt9MNgzZICavVZu1sMD74foK1r1ZOBXTsqV6wEiltQ==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-certificatemanager@1.204.0(@aws-cdk/aws-acmpca@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-route53@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-ZLykfAOb5Zbg/MFtzA+eHhMAK1xL32+oHKSK6tAYrgvv2aS42wJE4zSBV6jGCjnCkhcliUd5pwnACEl3ib0KLw==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-acmpca': 1.204.0
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/aws-route53': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-acmpca': 1.204.0(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-route53': 1.204.0(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/custom-resources@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-cloudformation@1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-9PkZa9mKLneB0My8wJC7lLZmPJsnOxNYy57ZZlRCQhK0eO6Jc9eVqrI29537W+3ireaEjCLEitkb8NO1FN/kQA==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/aws-s3': 1.204.0
+      '@aws-cdk/aws-sns': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sns': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codestarnotifications@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-cloudwatch@1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-ADT2D+4FtB9Zcy/TlF2tswQmjmrPVgORYTkznQQ2SniCODHWzz558+G1RV+IVvWRdH7nYQtV0UEuGZKpffWh2w==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-codeguruprofiler@1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-IrgY4SmVf9p5POfHm8BsPzaAO5lQTG7nhb5qN5AzS6zKCTuEjjTNHjx1TOfPV12mMIDAIVsK91mjDlAR88Mjbg==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-codestarnotifications@1.204.0(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-t//hSpC5/uVW2321YlbGabNVzhWayvqz+xSnagADGcT9qiq3KQR/uUlrgpHv1/eHRMk7EMrY9prlXeZpfzZ+cw==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-cognito@1.204.0(@aws-cdk/aws-certificatemanager@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/custom-resources@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-7QIbExW9dn1fktpDOh2nMHmor2S3uuHtIX5y33lc9OKg3xUuYw4AZ67MKapunN7QUBlffTlNzoUqlHoNSab+Zg==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-certificatemanager': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/custom-resources': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-certificatemanager': 1.204.0(@aws-cdk/aws-acmpca@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-route53@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/custom-resources': 1.204.0(@aws-cdk/aws-cloudformation@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+    bundledDependencies:
+      - punycode
+
+  /@aws-cdk/aws-dynamodb@1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kinesis@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/custom-resources@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-mJhbrmLiRa2etpzH2Uyz5429+YXIQeZqg0uXESEDLf5xCoypmwXn3zdxcBlz2sIbhTZcWta8s+dqIIor+GcMJQ==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-applicationautoscaling': 1.204.0
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kinesis': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/custom-resources': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-applicationautoscaling': 1.204.0(@aws-cdk/aws-autoscaling-common@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kinesis': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/custom-resources': 1.204.0(@aws-cdk/aws-cloudformation@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-ec2@1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-ssm@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-SoqZEgzdfPW0aa+FQ0CjzbDG+X+sDu6/BnLL2O10lxpa+9Dc1iyArAqNKFJG5KXGJe9ibvQXyNQqEjeGRFc22Q==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-logs': 1.204.0
+      '@aws-cdk/aws-s3': 1.204.0
+      '@aws-cdk/aws-s3-assets': 1.204.0
+      '@aws-cdk/aws-ssm': 1.204.0
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      '@aws-cdk/region-info': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-logs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3-assets': 1.204.0(@aws-cdk/assets@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-ssm': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      '@aws-cdk/region-info': 1.204.0
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-ecr-assets@1.204.0(@aws-cdk/assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-2GHD3pZdDoPxq3HhD4czANuI7TMoxpjszbzsQAc2wbdMX1j+K4vIL+PBpj3altfscPqcvy1v70lBjbG5rcBIkQ==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/assets': 1.204.0
+      '@aws-cdk/aws-ecr': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-s3': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/assets': 1.204.0(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-ecr': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-ecr@1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-oCts9e+ackWoFHeyn/3oKm3X1lSizleWNNXHp5WGM38lpNVrtCLMKSShu5iXJBhqRH2Mz1AcA4fDMWhe8DvJFA==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-events': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-events': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-efs@1.204.0(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-FB6nHgCuzYF5K9ywqYPEPjL2G1ATLIR9dJp1p4ydcEUuXDb4KSEVN4Bgx+q1e7EkWGIq+9glr+ckheEcTvETgw==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-ec2': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-ec2': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-ssm@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-elasticloadbalancingv2@1.204.0(@aws-cdk/aws-certificatemanager@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-route53@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-/43kzUTU3w9jimPuD5QZxoBN74+9QnOdhAcqIMVCFLPMkVLAxx3vg5g5MWWG+3j6rUoSecrtrP1AP7thZuo5wA==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-certificatemanager': 1.204.0
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-ec2': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/aws-route53': 1.204.0
+      '@aws-cdk/aws-s3': 1.204.0
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      '@aws-cdk/region-info': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-certificatemanager': 1.204.0(@aws-cdk/aws-acmpca@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-route53@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-ec2': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-ssm@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-route53': 1.204.0(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/custom-resources@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      '@aws-cdk/region-info': 1.204.0
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-events@1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-KnfUmtv+4RhydD9+5CHFxNJxtgn7+Xftwfwg1G7qV/tWYPFHcNIvhlSOgwDrQPa+pTo1MmkiUN0lAR0G8B/cbw==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-iam@1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-Fh2egW3v/uDdw3m4jvcupS7COL/+sJl2NHjz9l298ddyMxqDwJD2NQwE8mvgPLK4rDtAtDnE0c8RS6d+NWiC+w==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/region-info': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      '@aws-cdk/region-info': 1.204.0
+      constructs: 10.1.156
+    transitivePeerDependencies:
+      - '@aws-cdk/cloud-assembly-schema'
+    dev: false
+
+  /@aws-cdk/aws-kinesis@1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-CZm0Qk0PoagLZ81XadxgKFM0/20fhFuYRnT98oqdvsrqvYJddXaKt/peCI5v/PbRtptGkpn2FoHjkwxKWoJNJA==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-logs': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-logs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-kms@1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-iryZQ428L1VUVQ0zE96XTWWX7ANVtDrb6x+ZXXLTVUEPgjEd/W6zlcp++Qi0A3a9HLNd4PbEhK9rs0UKNTylzw==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-lambda-event-sources@1.204.0(@aws-cdk/aws-apigateway@1.204.0)(@aws-cdk/aws-dynamodb@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kinesis@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-s3-notifications@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-secretsmanager@1.204.0)(@aws-cdk/aws-sns-subscriptions@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-gH36hbc7cB5/CeDRHZ794bTjryls9O0tYLJJWDKphujIOlOZysPSGL8vqOujMkxJ1kHujBLt6PudbyqLaacQ9Q==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-apigateway': 1.204.0
+      '@aws-cdk/aws-dynamodb': 1.204.0
+      '@aws-cdk/aws-ec2': 1.204.0
+      '@aws-cdk/aws-events': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kinesis': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/aws-s3': 1.204.0
+      '@aws-cdk/aws-s3-notifications': 1.204.0
+      '@aws-cdk/aws-secretsmanager': 1.204.0
+      '@aws-cdk/aws-sns': 1.204.0
+      '@aws-cdk/aws-sns-subscriptions': 1.204.0
+      '@aws-cdk/aws-sqs': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-apigateway': 1.204.0(@aws-cdk/aws-certificatemanager@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-cognito@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-elasticloadbalancingv2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-stepfunctions@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-dynamodb': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kinesis@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/custom-resources@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-ec2': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-ssm@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-events': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kinesis': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3-notifications': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-secretsmanager': 1.204.0(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-sam@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sns': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codestarnotifications@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sns-subscriptions': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sqs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-lambda@1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-r0XXovrLAx8Q8Fz915SwzyQM/KLhEB6YCp3CsWliFGSOHEjRP8yX8UZdEJqe5kYD7Th9JAhUVzKgyv20P7g5Tg==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-applicationautoscaling': 1.204.0
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-codeguruprofiler': 1.204.0
+      '@aws-cdk/aws-ec2': 1.204.0
+      '@aws-cdk/aws-ecr': 1.204.0
+      '@aws-cdk/aws-ecr-assets': 1.204.0
+      '@aws-cdk/aws-efs': 1.204.0
+      '@aws-cdk/aws-events': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-logs': 1.204.0
+      '@aws-cdk/aws-s3': 1.204.0
+      '@aws-cdk/aws-s3-assets': 1.204.0
+      '@aws-cdk/aws-signer': 1.204.0
+      '@aws-cdk/aws-sns': 1.204.0
+      '@aws-cdk/aws-sqs': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      '@aws-cdk/region-info': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-applicationautoscaling': 1.204.0(@aws-cdk/aws-autoscaling-common@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-codeguruprofiler': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-ec2': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-ssm@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-ecr': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-ecr-assets': 1.204.0(@aws-cdk/assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-efs': 1.204.0(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-events': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-logs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3-assets': 1.204.0(@aws-cdk/assets@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-signer': 1.204.0(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sns': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codestarnotifications@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sqs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      '@aws-cdk/region-info': 1.204.0
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-logs@1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-PuHsDSkX6JFBgldxViGw91eFLageJ2cX89/RyLbWaJJUV4tlUKXSmmkVgOaBmvil0QKuGqbOzLXcXCoIK9Sg3A==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-s3-assets': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3-assets': 1.204.0(@aws-cdk/assets@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-route53@1.204.0(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/custom-resources@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-wQpGUXqc2y7yJFTipfuVxWy/VGeshyGlfGl4evusQK9Md0DMpVmG8kRgazLk1myqUSNSfi643UwvDJqNbYmdnA==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-ec2': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-logs': 1.204.0
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/custom-resources': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-ec2': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-ssm@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-logs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/custom-resources': 1.204.0(@aws-cdk/aws-cloudformation@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-s3-assets@1.204.0(@aws-cdk/assets@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-3MQbVZ95wW29Bl63tqu0Bz0td3osLyGg352l5G7Ztf3nK35FpuQlgxO4kcu74+s2sRwdd/R4KFV6eWhhPk+J7g==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/assets': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-s3': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/assets': 1.204.0(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-s3-notifications@1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-twFuLlBhQa2xrCkVchSDpZTnSEACE0EfEBjH+sGEEWBUpw+9GbF7VMH8/B9dGwtXu3wmD9WI4nXQbFlBEjGsEg==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/aws-s3': 1.204.0
+      '@aws-cdk/aws-sns': 1.204.0
+      '@aws-cdk/aws-sqs': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sns': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codestarnotifications@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sqs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-s3@1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-jsQ4n1L4MdPYDirBoOYgg7yzSk1TaFYo4dnwDlKiLJ5LcHG3Nai1cHb9XQbCy/9KKqbWsbd3WlkH+vcWEl8EUA==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-events': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-events': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-sam@1.204.0(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-8M3e1ZT6/nO6Yxtr7YtcrTF5YG6kjw8PcnOjda0SfUFo8Xya7oi1OZvDRIfAeOexsIgqjKSV8s7brDrWM5DIpg==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-secretsmanager@1.204.0(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-sam@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-ykpjYmP6qVOFbHtkaQBu3Xk7xp2UTR0ouzk7pb+zrEHKGmRvzGq+8J0IU+qXBJgQIVwFAPf2IgOSTzj6FJPdyA==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-ec2': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/aws-sam': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-ec2': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-ssm@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sam': 1.204.0(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-signer@1.204.0(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-AI26FhWF3+f/vDh3mleQa2CXv2/CmSerXgyk4XHMVVTTCjnlYGGmHmGlzYhqOSw6ALpQNdOSw8GVxU/ySpQCaw==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-sns-subscriptions@1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-yi78Kp0fV2nL7LnxL9ot8wbhGVYsL/ZeIzi6m2+iRZCgW1V+nO/a/eXdk5mMpBGLCqOtWcG59sIpSjqHvgpdaQ==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/aws-sns': 1.204.0
+      '@aws-cdk/aws-sqs': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sns': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codestarnotifications@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sqs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-sns@1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codestarnotifications@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-KoWxqKT/dTjt9Pk0a3kJLcd6xZHvrwbZDC0mrLtxdRNhQoHmnURAHW2UqX/lefrCU1GcUFf4L58N9ehBTunAFQ==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-codestarnotifications': 1.204.0
+      '@aws-cdk/aws-events': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/aws-sqs': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-codestarnotifications': 1.204.0(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-events': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sqs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-sqs@1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-dVzuGMh6d5/X9P9jel1w2Wgdy5MuSE35+eBSFxN+S7oJRoVSARpyKMNYAPMCW+2OJCDw7fIqO1rWbsZBT1Gq8g==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-ssm@1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-yYx7HZ8cWNXDAmX/99WkB477QhLoV2rcB8orei8aj7nRkNq5TMjeox0IJaZVgU+edNEDOi1fVX3flh0SAMiUrg==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-kms': 1.204.0
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-kms': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/aws-stepfunctions@1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-S8yuB5GtUajOxUcoMw82HQ+ei1U9uofwENEnEtYTeyqgjpd0FG4XHYoHvBdmgVvEKwpH/XiOePfEHeB8nTXufw==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0
+      '@aws-cdk/aws-events': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-logs': 1.204.0
+      '@aws-cdk/aws-s3': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-cloudwatch': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-events': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-logs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-s3': 1.204.0(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
   /@aws-cdk/cfnspec@2.84.0-alpha.0:
     resolution: {integrity: sha512-gUBBnDa/0uBiqY7oQhiRpmlFV2zBJVNbDDybnPLd0OaLWhpYPLuOTb10rQCUCZNh/r4LnQMW4sxkzOOfm1O30A==}
     dependencies:
       fs-extra: 9.1.0
       md5: 2.3.0
 
+  /@aws-cdk/cloud-assembly-schema@1.204.0:
+    resolution: {integrity: sha512-DMNSR4DNKMNNfhOq1UizwZvesOKdhk3R3gRigrvWBHIkHMQg+W6aZFl7WZLKSBkChAXhIsH///psjhDQ20gl1w==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    dev: false
+    bundledDependencies:
+      - jsonschema
+      - semver
+
   /@aws-cdk/cloud-assembly-schema@2.84.0:
     resolution: {integrity: sha512-TLQMexYkev8T1WSevwCibW4Dc9bvm89MUOdv1rJykCg4Vskmmw9WkWBRxW8S4nLgRAsQ0Uw8503sg5FIGjQ7rQ==}
     engines: {node: '>= 14.15.0'}
+    dependencies:
+      jsonschema: 1.4.1
+      semver: 7.5.1
     bundledDependencies:
       - jsonschema
       - semver
@@ -154,6 +1100,75 @@ packages:
       string-width: 4.2.3
       table: 6.8.1
 
+  /@aws-cdk/core@1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-yO/flJ9ihpzRhLTEqlbdbuPGtyyghHiiQPkUTLslwUM5vThVTbpgvW4UQHSGqytyst4MYXrN2jQn2RkwIRU57g==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0
+      '@aws-cdk/region-info': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+      '@aws-cdk/cx-api': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)
+      '@aws-cdk/region-info': 1.204.0
+      constructs: 10.1.156
+    dev: false
+    bundledDependencies:
+      - fs-extra
+      - minimatch
+      - '@balena/dockerignore'
+      - ignore
+
+  /@aws-cdk/custom-resources@1.204.0(@aws-cdk/aws-cloudformation@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156):
+    resolution: {integrity: sha512-0w3oi7LnAtMZpf7uUBDH6aT2Oo1EBQrqD+VTvPZDX8PJFAox8ol7buZ9sSTpIXgv9j/GK9yaPTIHt4m8ok9kVQ==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/aws-cloudformation': 1.204.0
+      '@aws-cdk/aws-ec2': 1.204.0
+      '@aws-cdk/aws-iam': 1.204.0
+      '@aws-cdk/aws-lambda': 1.204.0
+      '@aws-cdk/aws-logs': 1.204.0
+      '@aws-cdk/aws-sns': 1.204.0
+      '@aws-cdk/core': 1.204.0
+      constructs: ^3.3.69
+    dependencies:
+      '@aws-cdk/aws-cloudformation': 1.204.0(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-lambda@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-ec2': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-ssm@1.204.0)(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-iam': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-lambda': 1.204.0(@aws-cdk/aws-applicationautoscaling@1.204.0)(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codeguruprofiler@1.204.0)(@aws-cdk/aws-ec2@1.204.0)(@aws-cdk/aws-ecr-assets@1.204.0)(@aws-cdk/aws-ecr@1.204.0)(@aws-cdk/aws-efs@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-logs@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/aws-s3@1.204.0)(@aws-cdk/aws-signer@1.204.0)(@aws-cdk/aws-sns@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-logs': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-s3-assets@1.204.0)(@aws-cdk/core@1.204.0)(@aws-cdk/cx-api@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/aws-sns': 1.204.0(@aws-cdk/aws-cloudwatch@1.204.0)(@aws-cdk/aws-codestarnotifications@1.204.0)(@aws-cdk/aws-events@1.204.0)(@aws-cdk/aws-iam@1.204.0)(@aws-cdk/aws-kms@1.204.0)(@aws-cdk/aws-sqs@1.204.0)(@aws-cdk/core@1.204.0)(constructs@10.1.156)
+      '@aws-cdk/core': 1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0)(@aws-cdk/cx-api@1.204.0)(@aws-cdk/region-info@1.204.0)(constructs@10.1.156)
+      constructs: 10.1.156
+    dev: false
+
+  /@aws-cdk/cx-api@1.204.0(@aws-cdk/cloud-assembly-schema@1.204.0):
+    resolution: {integrity: sha512-Juh/jL1kFPD5JcI9Uu6X0mM2L6hBCN5grdjSS40F8dThbH25VPzFBejaKjiy5nP1UZB83X+HW3utYOEi97DqxA==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    peerDependencies:
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+    dependencies:
+      '@aws-cdk/cloud-assembly-schema': 1.204.0
+    dev: false
+    bundledDependencies:
+      - semver
+
   /@aws-cdk/cx-api@2.84.0(@aws-cdk/cloud-assembly-schema@2.84.0):
     resolution: {integrity: sha512-YcyEjT9TYtuXQgm5w9x4rsWLYRQAL78PEjjg3nRVgX6BPjjyvHtVydsiAh3h87tY00PVUlC+qQLb2FSY5YmMHg==}
     engines: {node: '>= 14.15.0'}
@@ -161,8 +1176,19 @@ packages:
       '@aws-cdk/cloud-assembly-schema': 2.84.0
     dependencies:
       '@aws-cdk/cloud-assembly-schema': 2.84.0
+      semver: 7.5.1
     bundledDependencies:
       - semver
+
+  /@aws-cdk/region-info@1.204.0:
+    resolution: {integrity: sha512-lPkYJNoN4Gjlf0Fdfgcd1RTm5RD9qtfaFMwVvTn2KGTr7ZqmFskGQ9FqIcd5vd6GmsbAL8OrFOToLr1AHDuOiQ==}
+    engines: {node: '>= 14.15.0'}
+    deprecated: |-
+      AWS CDK v1 has reached End-of-Support on 2023-06-01.
+      This package is no longer being updated, and users should migrate to AWS CDK v2.
+
+      For more information on how to migrate, see https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html
+    dev: false
 
   /@aws-crypto/crc32@3.0.0:
     resolution: {integrity: sha512-IzSgsrxUcsrejQbPVilIKy16kAT52EwB6zSaI+M3xxIhKh5+aldEyvI+z6erM7TCLB2BJsFrtHjp6/4/sr+3dA==}
@@ -175,7 +1201,7 @@ packages:
     resolution: {integrity: sha512-ENNPPManmnVJ4BTXlOjAgD7URidbAznURqD0KvfREyc4o20DPYdEldU1f5cQ7Jbj0CJJSPaMIk/9ZshdB3210w==}
     dependencies:
       '@aws-crypto/util': 3.0.0
-      '@aws-sdk/types': 3.347.0
+      '@aws-sdk/types': 3.378.0
       tslib: 1.14.1
 
   /@aws-crypto/ie11-detection@3.0.0:
@@ -189,7 +1215,7 @@ packages:
       '@aws-crypto/ie11-detection': 3.0.0
       '@aws-crypto/supports-web-crypto': 3.0.0
       '@aws-crypto/util': 3.0.0
-      '@aws-sdk/types': 3.347.0
+      '@aws-sdk/types': 3.378.0
       '@aws-sdk/util-locate-window': 3.208.0
       '@aws-sdk/util-utf8-browser': 3.259.0
       tslib: 1.14.1
@@ -201,7 +1227,7 @@ packages:
       '@aws-crypto/sha256-js': 3.0.0
       '@aws-crypto/supports-web-crypto': 3.0.0
       '@aws-crypto/util': 3.0.0
-      '@aws-sdk/types': 3.347.0
+      '@aws-sdk/types': 3.378.0
       '@aws-sdk/util-locate-window': 3.208.0
       '@aws-sdk/util-utf8-browser': 3.259.0
       tslib: 1.14.1
@@ -210,7 +1236,15 @@ packages:
     resolution: {integrity: sha512-PnNN7os0+yd1XvXAy23CFOmTbMaDxgxXtTKHybrJ39Y8kGzBATgBFibWJKH6BhytLI/Zyszs87xCOBNyBig6vQ==}
     dependencies:
       '@aws-crypto/util': 3.0.0
-      '@aws-sdk/types': 3.347.0
+      '@aws-sdk/types': 3.378.0
+      tslib: 1.14.1
+
+  /@aws-crypto/sha256-js@5.0.0:
+    resolution: {integrity: sha512-g+u9iKkaQVp9Mjoxq1IJSHj9NHGZF441+R/GIH0dn7u4mix5QQ4VqgpppHrNm1LzjUzb0BpcFGsBXP6cOVf+ZQ==}
+    engines: {node: '>=16.0.0'}
+    dependencies:
+      '@aws-crypto/util': 5.0.0
+      '@aws-sdk/types': 3.378.0
       tslib: 1.14.1
 
   /@aws-crypto/supports-web-crypto@3.0.0:
@@ -222,6 +1256,13 @@ packages:
     resolution: {integrity: sha512-2OJlpeJpCR48CC8r+uKVChzs9Iungj9wkZrl8Z041DWEWvyIHILYKCPNzJghKsivj+S3mLo6BVc7mBNzdxA46w==}
     dependencies:
       '@aws-sdk/types': 3.347.0
+      '@aws-sdk/util-utf8-browser': 3.259.0
+      tslib: 1.14.1
+
+  /@aws-crypto/util@5.0.0:
+    resolution: {integrity: sha512-1GYqLdYRe96idcCltlqxdJ68OWE6ADT8qGLmVi7PVHKl8AxD2EWSbJSSevPq2eTx6vaPZpkr1RoZ3lcw/uGoEA==}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
       '@aws-sdk/util-utf8-browser': 3.259.0
       tslib: 1.14.1
 
@@ -340,6 +1381,50 @@ packages:
       '@aws-sdk/util-user-agent-browser': 3.282.0
       '@aws-sdk/util-user-agent-node': 3.287.0
       '@aws-sdk/util-utf8': 3.254.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
+  /@aws-sdk/client-ecs@3.388.0:
+    resolution: {integrity: sha512-efcw8XPmg+xxpFPpOc5Ua9/81Lp4n8Yoo1AwfwGMjjLU7sWo17vFLKMUl5O7MaKTLQO9o8bRUp/HwfzyvGtcaQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-crypto/sha256-browser': 3.0.0
+      '@aws-crypto/sha256-js': 3.0.0
+      '@aws-sdk/client-sts': 3.388.0
+      '@aws-sdk/credential-provider-node': 3.388.0
+      '@aws-sdk/middleware-host-header': 3.387.0
+      '@aws-sdk/middleware-logger': 3.387.0
+      '@aws-sdk/middleware-recursion-detection': 3.387.0
+      '@aws-sdk/middleware-signing': 3.387.0
+      '@aws-sdk/middleware-user-agent': 3.387.0
+      '@aws-sdk/types': 3.387.0
+      '@aws-sdk/util-endpoints': 3.387.0
+      '@aws-sdk/util-user-agent-browser': 3.387.0
+      '@aws-sdk/util-user-agent-node': 3.387.0
+      '@smithy/config-resolver': 2.0.2
+      '@smithy/fetch-http-handler': 2.0.2
+      '@smithy/hash-node': 2.0.2
+      '@smithy/invalid-dependency': 2.0.2
+      '@smithy/middleware-content-length': 2.0.2
+      '@smithy/middleware-endpoint': 2.0.2
+      '@smithy/middleware-retry': 2.0.2
+      '@smithy/middleware-serde': 2.0.2
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/node-config-provider': 2.0.2
+      '@smithy/node-http-handler': 2.0.2
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/smithy-client': 2.0.2
+      '@smithy/types': 2.1.0
+      '@smithy/url-parser': 2.0.2
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-body-length-browser': 2.0.0
+      '@smithy/util-body-length-node': 2.0.0
+      '@smithy/util-defaults-mode-browser': 2.0.2
+      '@smithy/util-defaults-mode-node': 2.0.2
+      '@smithy/util-retry': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      '@smithy/util-waiter': 2.0.2
       tslib: 2.5.0
     transitivePeerDependencies:
       - aws-crt
@@ -666,6 +1751,98 @@ packages:
       - '@aws-sdk/signature-v4-crt'
       - aws-crt
 
+  /@aws-sdk/client-sns@3.379.1:
+    resolution: {integrity: sha512-+AjoWSddHnMdy/wpEkgOZcWPykEcC9ciRUeJomwmsXFLZ1brBizFEEUwfLjdqfU8abbSDl7KnL+T6YJLYsSH4g==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-crypto/sha256-browser': 3.0.0
+      '@aws-crypto/sha256-js': 3.0.0
+      '@aws-sdk/client-sts': 3.379.1
+      '@aws-sdk/credential-provider-node': 3.379.1
+      '@aws-sdk/middleware-host-header': 3.379.1
+      '@aws-sdk/middleware-logger': 3.378.0
+      '@aws-sdk/middleware-recursion-detection': 3.378.0
+      '@aws-sdk/middleware-signing': 3.379.1
+      '@aws-sdk/middleware-user-agent': 3.379.1
+      '@aws-sdk/types': 3.378.0
+      '@aws-sdk/util-endpoints': 3.378.0
+      '@aws-sdk/util-user-agent-browser': 3.378.0
+      '@aws-sdk/util-user-agent-node': 3.378.0
+      '@smithy/config-resolver': 2.0.1
+      '@smithy/fetch-http-handler': 2.0.1
+      '@smithy/hash-node': 2.0.1
+      '@smithy/invalid-dependency': 2.0.1
+      '@smithy/middleware-content-length': 2.0.1
+      '@smithy/middleware-endpoint': 2.0.1
+      '@smithy/middleware-retry': 2.0.1
+      '@smithy/middleware-serde': 2.0.1
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/node-config-provider': 2.0.1
+      '@smithy/node-http-handler': 2.0.1
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/smithy-client': 2.0.1
+      '@smithy/types': 2.0.2
+      '@smithy/url-parser': 2.0.1
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-body-length-browser': 2.0.0
+      '@smithy/util-body-length-node': 2.0.0
+      '@smithy/util-defaults-mode-browser': 2.0.1
+      '@smithy/util-defaults-mode-node': 2.0.1
+      '@smithy/util-retry': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      fast-xml-parser: 4.2.5
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+    dev: false
+
+  /@aws-sdk/client-sqs@3.379.1:
+    resolution: {integrity: sha512-WnN5HIhAayhz5sYOufRmFia2ulZ0k8TvQ8fVmvz9ENuBKHzMFm64up3VQAMA+zCz4sKXKFW6WgaHCLwrj+libA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-crypto/sha256-browser': 3.0.0
+      '@aws-crypto/sha256-js': 3.0.0
+      '@aws-sdk/client-sts': 3.379.1
+      '@aws-sdk/credential-provider-node': 3.379.1
+      '@aws-sdk/middleware-host-header': 3.379.1
+      '@aws-sdk/middleware-logger': 3.378.0
+      '@aws-sdk/middleware-recursion-detection': 3.378.0
+      '@aws-sdk/middleware-sdk-sqs': 3.378.0
+      '@aws-sdk/middleware-signing': 3.379.1
+      '@aws-sdk/middleware-user-agent': 3.379.1
+      '@aws-sdk/types': 3.378.0
+      '@aws-sdk/util-endpoints': 3.378.0
+      '@aws-sdk/util-user-agent-browser': 3.378.0
+      '@aws-sdk/util-user-agent-node': 3.378.0
+      '@smithy/config-resolver': 2.0.1
+      '@smithy/fetch-http-handler': 2.0.1
+      '@smithy/hash-node': 2.0.1
+      '@smithy/invalid-dependency': 2.0.1
+      '@smithy/md5-js': 2.0.1
+      '@smithy/middleware-content-length': 2.0.1
+      '@smithy/middleware-endpoint': 2.0.1
+      '@smithy/middleware-retry': 2.0.1
+      '@smithy/middleware-serde': 2.0.1
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/node-config-provider': 2.0.1
+      '@smithy/node-http-handler': 2.0.1
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/smithy-client': 2.0.1
+      '@smithy/types': 2.0.2
+      '@smithy/url-parser': 2.0.1
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-body-length-browser': 2.0.0
+      '@smithy/util-body-length-node': 2.0.0
+      '@smithy/util-defaults-mode-browser': 2.0.1
+      '@smithy/util-defaults-mode-node': 2.0.1
+      '@smithy/util-retry': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      fast-xml-parser: 4.2.5
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+    dev: false
+
   /@aws-sdk/client-ssm@3.287.0:
     resolution: {integrity: sha512-H+VbWpI+iPkYVsaA8LAeTn0/KCtIKfZdD71gkHIyRJNjGaQ06C98K29d0rxiEd/qpc+3dGYDKDuTzOM9ecl9ZQ==}
     engines: {node: '>=14.0.0'}
@@ -829,6 +2006,46 @@ packages:
     transitivePeerDependencies:
       - aws-crt
 
+  /@aws-sdk/client-sso-oidc@3.379.1:
+    resolution: {integrity: sha512-B6hZ2ysPyvafCMf6gls1jHI/IUviVZ4+TURpNfUBqThg/hZ1IMxc4BLkXca6VlgzYR+bWU8GKiClS9fFH6mu0g==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-crypto/sha256-browser': 3.0.0
+      '@aws-crypto/sha256-js': 3.0.0
+      '@aws-sdk/middleware-host-header': 3.379.1
+      '@aws-sdk/middleware-logger': 3.378.0
+      '@aws-sdk/middleware-recursion-detection': 3.378.0
+      '@aws-sdk/middleware-user-agent': 3.379.1
+      '@aws-sdk/types': 3.378.0
+      '@aws-sdk/util-endpoints': 3.378.0
+      '@aws-sdk/util-user-agent-browser': 3.378.0
+      '@aws-sdk/util-user-agent-node': 3.378.0
+      '@smithy/config-resolver': 2.0.1
+      '@smithy/fetch-http-handler': 2.0.1
+      '@smithy/hash-node': 2.0.1
+      '@smithy/invalid-dependency': 2.0.1
+      '@smithy/middleware-content-length': 2.0.1
+      '@smithy/middleware-endpoint': 2.0.1
+      '@smithy/middleware-retry': 2.0.1
+      '@smithy/middleware-serde': 2.0.1
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/node-config-provider': 2.0.1
+      '@smithy/node-http-handler': 2.0.1
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/smithy-client': 2.0.1
+      '@smithy/types': 2.0.2
+      '@smithy/url-parser': 2.0.1
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-body-length-browser': 2.0.0
+      '@smithy/util-body-length-node': 2.0.0
+      '@smithy/util-defaults-mode-browser': 2.0.1
+      '@smithy/util-defaults-mode-node': 2.0.1
+      '@smithy/util-retry': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
   /@aws-sdk/client-sso@3.287.0:
     resolution: {integrity: sha512-YXD/oP38tsgKYTnft17O6OLTBBdal7CZsRhCJUHUSg3xAV9AiLloMwGrSxcZh4qMhx5bcn9XaVxu8dApsXnJXw==}
     engines: {node: '>=14.0.0'}
@@ -944,6 +2161,86 @@ packages:
       '@aws-sdk/util-utf8': 3.310.0
       '@smithy/protocol-http': 1.0.1
       '@smithy/types': 1.0.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
+  /@aws-sdk/client-sso@3.379.1:
+    resolution: {integrity: sha512-2N16TPnRcq+seNP8VY/Zq7kfnrUOrJMbVNpyDZWGe5Qglua3n8v/FzxmXFNI87MiSODq8IHtiXhggWhefCd+TA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-crypto/sha256-browser': 3.0.0
+      '@aws-crypto/sha256-js': 3.0.0
+      '@aws-sdk/middleware-host-header': 3.379.1
+      '@aws-sdk/middleware-logger': 3.378.0
+      '@aws-sdk/middleware-recursion-detection': 3.378.0
+      '@aws-sdk/middleware-user-agent': 3.379.1
+      '@aws-sdk/types': 3.378.0
+      '@aws-sdk/util-endpoints': 3.378.0
+      '@aws-sdk/util-user-agent-browser': 3.378.0
+      '@aws-sdk/util-user-agent-node': 3.378.0
+      '@smithy/config-resolver': 2.0.1
+      '@smithy/fetch-http-handler': 2.0.1
+      '@smithy/hash-node': 2.0.1
+      '@smithy/invalid-dependency': 2.0.1
+      '@smithy/middleware-content-length': 2.0.1
+      '@smithy/middleware-endpoint': 2.0.1
+      '@smithy/middleware-retry': 2.0.1
+      '@smithy/middleware-serde': 2.0.1
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/node-config-provider': 2.0.1
+      '@smithy/node-http-handler': 2.0.1
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/smithy-client': 2.0.1
+      '@smithy/types': 2.0.2
+      '@smithy/url-parser': 2.0.1
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-body-length-browser': 2.0.0
+      '@smithy/util-body-length-node': 2.0.0
+      '@smithy/util-defaults-mode-browser': 2.0.1
+      '@smithy/util-defaults-mode-node': 2.0.1
+      '@smithy/util-retry': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
+  /@aws-sdk/client-sso@3.387.0:
+    resolution: {integrity: sha512-E7uKSvbA0XMKSN5KLInf52hmMpe9/OKo6N9OPffGXdn3fNEQlvyQq3meUkqG7Is0ldgsQMz5EUBNtNybXzr3tQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-crypto/sha256-browser': 3.0.0
+      '@aws-crypto/sha256-js': 3.0.0
+      '@aws-sdk/middleware-host-header': 3.387.0
+      '@aws-sdk/middleware-logger': 3.387.0
+      '@aws-sdk/middleware-recursion-detection': 3.387.0
+      '@aws-sdk/middleware-user-agent': 3.387.0
+      '@aws-sdk/types': 3.387.0
+      '@aws-sdk/util-endpoints': 3.387.0
+      '@aws-sdk/util-user-agent-browser': 3.387.0
+      '@aws-sdk/util-user-agent-node': 3.387.0
+      '@smithy/config-resolver': 2.0.2
+      '@smithy/fetch-http-handler': 2.0.2
+      '@smithy/hash-node': 2.0.2
+      '@smithy/invalid-dependency': 2.0.2
+      '@smithy/middleware-content-length': 2.0.2
+      '@smithy/middleware-endpoint': 2.0.2
+      '@smithy/middleware-retry': 2.0.2
+      '@smithy/middleware-serde': 2.0.2
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/node-config-provider': 2.0.2
+      '@smithy/node-http-handler': 2.0.2
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/smithy-client': 2.0.2
+      '@smithy/types': 2.1.0
+      '@smithy/url-parser': 2.0.2
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-body-length-browser': 2.0.0
+      '@smithy/util-body-length-node': 2.0.0
+      '@smithy/util-defaults-mode-browser': 2.0.2
+      '@smithy/util-defaults-mode-node': 2.0.2
+      '@smithy/util-retry': 2.0.0
+      '@smithy/util-utf8': 2.0.0
       tslib: 2.5.0
     transitivePeerDependencies:
       - aws-crt
@@ -1079,6 +2376,94 @@ packages:
     transitivePeerDependencies:
       - aws-crt
 
+  /@aws-sdk/client-sts@3.379.1:
+    resolution: {integrity: sha512-gEnKuk9bYjThvmxCgOgCn1qa+rRX8IgIRE2+xhbWhlpDanozhkDq9aMB5moX4tBNYQEmi1LtGD+JOvOoZRnToQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-crypto/sha256-browser': 3.0.0
+      '@aws-crypto/sha256-js': 3.0.0
+      '@aws-sdk/credential-provider-node': 3.379.1
+      '@aws-sdk/middleware-host-header': 3.379.1
+      '@aws-sdk/middleware-logger': 3.378.0
+      '@aws-sdk/middleware-recursion-detection': 3.378.0
+      '@aws-sdk/middleware-sdk-sts': 3.379.1
+      '@aws-sdk/middleware-signing': 3.379.1
+      '@aws-sdk/middleware-user-agent': 3.379.1
+      '@aws-sdk/types': 3.378.0
+      '@aws-sdk/util-endpoints': 3.378.0
+      '@aws-sdk/util-user-agent-browser': 3.378.0
+      '@aws-sdk/util-user-agent-node': 3.378.0
+      '@smithy/config-resolver': 2.0.1
+      '@smithy/fetch-http-handler': 2.0.1
+      '@smithy/hash-node': 2.0.1
+      '@smithy/invalid-dependency': 2.0.1
+      '@smithy/middleware-content-length': 2.0.1
+      '@smithy/middleware-endpoint': 2.0.1
+      '@smithy/middleware-retry': 2.0.1
+      '@smithy/middleware-serde': 2.0.1
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/node-config-provider': 2.0.1
+      '@smithy/node-http-handler': 2.0.1
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/smithy-client': 2.0.1
+      '@smithy/types': 2.0.2
+      '@smithy/url-parser': 2.0.1
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-body-length-browser': 2.0.0
+      '@smithy/util-body-length-node': 2.0.0
+      '@smithy/util-defaults-mode-browser': 2.0.1
+      '@smithy/util-defaults-mode-node': 2.0.1
+      '@smithy/util-retry': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      fast-xml-parser: 4.2.5
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
+  /@aws-sdk/client-sts@3.388.0:
+    resolution: {integrity: sha512-y9FAcAYHT8O6T/jqhgsIQUb4gLiSTKD3xtzudDvjmFi8gl0oRIY1npbeckSiK6k07VQugm2s64I0nDnDxtWsBg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-crypto/sha256-browser': 3.0.0
+      '@aws-crypto/sha256-js': 3.0.0
+      '@aws-sdk/credential-provider-node': 3.388.0
+      '@aws-sdk/middleware-host-header': 3.387.0
+      '@aws-sdk/middleware-logger': 3.387.0
+      '@aws-sdk/middleware-recursion-detection': 3.387.0
+      '@aws-sdk/middleware-sdk-sts': 3.387.0
+      '@aws-sdk/middleware-signing': 3.387.0
+      '@aws-sdk/middleware-user-agent': 3.387.0
+      '@aws-sdk/types': 3.387.0
+      '@aws-sdk/util-endpoints': 3.387.0
+      '@aws-sdk/util-user-agent-browser': 3.387.0
+      '@aws-sdk/util-user-agent-node': 3.387.0
+      '@smithy/config-resolver': 2.0.2
+      '@smithy/fetch-http-handler': 2.0.2
+      '@smithy/hash-node': 2.0.2
+      '@smithy/invalid-dependency': 2.0.2
+      '@smithy/middleware-content-length': 2.0.2
+      '@smithy/middleware-endpoint': 2.0.2
+      '@smithy/middleware-retry': 2.0.2
+      '@smithy/middleware-serde': 2.0.2
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/node-config-provider': 2.0.2
+      '@smithy/node-http-handler': 2.0.2
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/smithy-client': 2.0.2
+      '@smithy/types': 2.1.0
+      '@smithy/url-parser': 2.0.2
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-body-length-browser': 2.0.0
+      '@smithy/util-body-length-node': 2.0.0
+      '@smithy/util-defaults-mode-browser': 2.0.2
+      '@smithy/util-defaults-mode-node': 2.0.2
+      '@smithy/util-retry': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      fast-xml-parser: 4.2.5
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
   /@aws-sdk/config-resolver@3.287.0:
     resolution: {integrity: sha512-YLJ9+ufcrj73DBmqgG50WMAVNHb8PdWL7hkp3gs00VOsXeEMGdQK92fVlx8Him8yPDikvLS2orrEVRcYxj5Uag==}
     engines: {node: '>=14.0.0'}
@@ -1140,6 +2525,24 @@ packages:
     dependencies:
       '@aws-sdk/property-provider': 3.347.0
       '@aws-sdk/types': 3.347.0
+      tslib: 2.5.0
+
+  /@aws-sdk/credential-provider-env@3.378.0:
+    resolution: {integrity: sha512-B2OVdO9kBClDwGgWTBLAQwFV8qYTYGyVujg++1FZFSFMt8ORFdZ5fNpErvJtiSjYiOOQMzyBeSNhKyYNXCiJjQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@aws-sdk/credential-provider-env@3.387.0:
+    resolution: {integrity: sha512-PVqNk7XPIYe5CMYNvELkcALtkl/pIM8/uPtqEtTg+mgnZBeL4fAmgXZiZMahQo1DxP5t/JaK384f6JG+A0qDjA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/types': 2.1.0
       tslib: 2.5.0
 
   /@aws-sdk/credential-provider-imds@3.287.0:
@@ -1220,6 +2623,40 @@ packages:
     transitivePeerDependencies:
       - aws-crt
 
+  /@aws-sdk/credential-provider-ini@3.379.1:
+    resolution: {integrity: sha512-YhEsJIskzCFwIIKiMN9GSHQkgWwj/b7rq0ofhsXsCRimFtdVkmMlB9veE6vtFAuXpX/WOGWdlWek1az0V22uuw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/credential-provider-env': 3.378.0
+      '@aws-sdk/credential-provider-process': 3.378.0
+      '@aws-sdk/credential-provider-sso': 3.379.1
+      '@aws-sdk/credential-provider-web-identity': 3.378.0
+      '@aws-sdk/types': 3.378.0
+      '@smithy/credential-provider-imds': 2.0.1
+      '@smithy/property-provider': 2.0.1
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
+  /@aws-sdk/credential-provider-ini@3.388.0:
+    resolution: {integrity: sha512-3dg3A8AiZ5vXkSAYyyI3V/AW3Eo6KQJyE/glA+Nr2M0oAjT4z3vHhS3pf2B+hfKGZBTuKKgxusrrhrQABd/Diw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/credential-provider-env': 3.387.0
+      '@aws-sdk/credential-provider-process': 3.387.0
+      '@aws-sdk/credential-provider-sso': 3.388.0
+      '@aws-sdk/credential-provider-web-identity': 3.387.0
+      '@aws-sdk/types': 3.387.0
+      '@smithy/credential-provider-imds': 2.0.1
+      '@smithy/property-provider': 2.0.1
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
   /@aws-sdk/credential-provider-node@3.287.0:
     resolution: {integrity: sha512-7f41hmgwMpMOFgDmpR76xEAXDlG4OHkS1pJU5bt9P4UL2EJWuxvJkdbvI4g9th+lT4cbzWXGFwK+oZ7xBKsVKw==}
     engines: {node: '>=14.0.0'}
@@ -1271,6 +2708,42 @@ packages:
     transitivePeerDependencies:
       - aws-crt
 
+  /@aws-sdk/credential-provider-node@3.379.1:
+    resolution: {integrity: sha512-39Y4OHKn6a8lY8YJhSLLw08aZytWxfvSjM4ObIEnE6hjLl8gsL9vROKKITsh3q6iGQ1EDSWMWZL50aOh3LJUIg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/credential-provider-env': 3.378.0
+      '@aws-sdk/credential-provider-ini': 3.379.1
+      '@aws-sdk/credential-provider-process': 3.378.0
+      '@aws-sdk/credential-provider-sso': 3.379.1
+      '@aws-sdk/credential-provider-web-identity': 3.378.0
+      '@aws-sdk/types': 3.378.0
+      '@smithy/credential-provider-imds': 2.0.1
+      '@smithy/property-provider': 2.0.1
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
+  /@aws-sdk/credential-provider-node@3.388.0:
+    resolution: {integrity: sha512-BqWAkIG08gj/wevpesaZhAjALjfUNVjseHQRk+DNUoHIfyibW7Ahf3q/GIPs11dA2o8ECwR9/fo68Sq+sK799A==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/credential-provider-env': 3.387.0
+      '@aws-sdk/credential-provider-ini': 3.388.0
+      '@aws-sdk/credential-provider-process': 3.387.0
+      '@aws-sdk/credential-provider-sso': 3.388.0
+      '@aws-sdk/credential-provider-web-identity': 3.387.0
+      '@aws-sdk/types': 3.387.0
+      '@smithy/credential-provider-imds': 2.0.1
+      '@smithy/property-provider': 2.0.1
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
   /@aws-sdk/credential-provider-process@3.287.0:
     resolution: {integrity: sha512-3iWtit/4Iyv/JjL2L0cO7v94NvsISTH/ak0CXqAgb2LdCOz0JN3txgg+ciZzdVLUP8M7x/bm4HjMcUVaxS0HZw==}
     engines: {node: '>=14.0.0'}
@@ -1296,6 +2769,26 @@ packages:
       '@aws-sdk/property-provider': 3.347.0
       '@aws-sdk/shared-ini-file-loader': 3.347.0
       '@aws-sdk/types': 3.347.0
+      tslib: 2.5.0
+
+  /@aws-sdk/credential-provider-process@3.378.0:
+    resolution: {integrity: sha512-KFTIy7u+wXj3eDua4rgS0tODzMnXtXhAm1RxzCW9FL5JLBBrd82ymCj1Dp72217Sw5Do6NjCnDTTNkCHZMA77w==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@aws-sdk/credential-provider-process@3.387.0:
+    resolution: {integrity: sha512-tQScLHmDlqkQN+mqw4s3cxepEUeHYDhFl5eH+J8puvPqWjXMYpCEdY79SAtWs6SZd4CWiZ0VLeYU6xQBZengbQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/types': 2.1.0
       tslib: 2.5.0
 
   /@aws-sdk/credential-provider-sso@3.287.0:
@@ -1337,6 +2830,34 @@ packages:
     transitivePeerDependencies:
       - aws-crt
 
+  /@aws-sdk/credential-provider-sso@3.379.1:
+    resolution: {integrity: sha512-PhGtu1+JbUntYP/5CSfazQhWsjUBiksEuhg9fLhYl5OAgZVjVygbgoNVUz/gM7gZJSEMsasTazkn7yZVzO/k7w==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/client-sso': 3.379.1
+      '@aws-sdk/token-providers': 3.379.1
+      '@aws-sdk/types': 3.378.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
+  /@aws-sdk/credential-provider-sso@3.388.0:
+    resolution: {integrity: sha512-RH02+rntaO0UhnSBr42n+7q8HOztc+Dets/hh6cWovf3Yi9s9ghLgYLN9FXpSosfot3XkmT/HOCa+CphAmGN9A==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/client-sso': 3.387.0
+      '@aws-sdk/token-providers': 3.388.0
+      '@aws-sdk/types': 3.387.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
   /@aws-sdk/credential-provider-web-identity@3.272.0:
     resolution: {integrity: sha512-ImrHMkcgneGa/HadHAQXPwOrX26sAKuB8qlMxZF/ZCM2B55u8deY+ZVkVuraeKb7YsahMGehPFOfRAF6mvFI5Q==}
     engines: {node: '>=14.0.0'}
@@ -1359,6 +2880,24 @@ packages:
     dependencies:
       '@aws-sdk/property-provider': 3.347.0
       '@aws-sdk/types': 3.347.0
+      tslib: 2.5.0
+
+  /@aws-sdk/credential-provider-web-identity@3.378.0:
+    resolution: {integrity: sha512-GWjydOszhc4xDF8xuPtBvboglXQr0gwCW1oHAvmLcOT38+Hd6qnKywnMSeoXYRPgoKfF9TkWQgW1jxplzCG0UA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@aws-sdk/credential-provider-web-identity@3.387.0:
+    resolution: {integrity: sha512-6ueMPl+J3KWv6ZaAWF4Z138QCuBVFZRVAgwbtP3BNqWrrs4Q6TPksOQJ79lRDMpv0EUoyVl04B6lldNlhN8RdA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/types': 2.1.0
       tslib: 2.5.0
 
   /@aws-sdk/credential-providers@3.287.0:
@@ -1648,6 +3187,24 @@ packages:
       '@aws-sdk/types': 3.347.0
       tslib: 2.5.0
 
+  /@aws-sdk/middleware-host-header@3.379.1:
+    resolution: {integrity: sha512-LI4KpAFWNWVr2aH2vRVblr0Y8tvDz23lj8LOmbDmCrzd5M21nxuocI/8nEAQj55LiTIf9Zs+dHCdsyegnFXdrA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@aws-sdk/middleware-host-header@3.387.0:
+    resolution: {integrity: sha512-EWm9PXSr8dSp7hnRth1U7OfelXQp9dLf1yS1kUL+UhppYDJpjhdP7ql3NI4xJKw8e76sP2FuJYEuzWnJHuWoyQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
   /@aws-sdk/middleware-location-constraint@3.272.0:
     resolution: {integrity: sha512-tROQ1DM9djxfXmXPTT0XietrUt6y6QEHShPI9rQMstjXYiaHBVXRveuRLcLAKwl4nXIrgmnIU7ygyj2ZyD8gcA==}
     engines: {node: '>=14.0.0'}
@@ -1676,6 +3233,22 @@ packages:
       '@aws-sdk/types': 3.347.0
       tslib: 2.5.0
 
+  /@aws-sdk/middleware-logger@3.378.0:
+    resolution: {integrity: sha512-l1DyaDLm3KeBMNMuANI3scWh8Xvu248x+vw6Z7ExWOhGXFmQ1MW7YvASg/SdxWkhlF9HmkkTif1LdMB22x6QDA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@aws-sdk/middleware-logger@3.387.0:
+    resolution: {integrity: sha512-FjAvJr1XyaInT81RxUwgifnbXoFJrRBFc64XeFJgFanGIQCWLYxRrK2HV9eBpao/AycbmuoHgLd/f0sa4hZFoQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
   /@aws-sdk/middleware-recursion-detection@3.282.0:
     resolution: {integrity: sha512-cSLq/daEaTEucbP/TgAXIOcpwLu7Bfw3VGzH1U56ngDjI4KWvUheF16JiB6OqKQXduPBPsdZ9dVmkDVKddmCRw==}
     engines: {node: '>=14.0.0'}
@@ -1698,6 +3271,24 @@ packages:
     dependencies:
       '@aws-sdk/protocol-http': 3.347.0
       '@aws-sdk/types': 3.347.0
+      tslib: 2.5.0
+
+  /@aws-sdk/middleware-recursion-detection@3.378.0:
+    resolution: {integrity: sha512-mUMfHAz0oGNIWiTZHTVJb+I515Hqs2zx1j36Le4MMiiaMkPW1SRUF1FIwGuc1wh6E8jB5q+XfEMriDjRi4TZRA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@aws-sdk/middleware-recursion-detection@3.387.0:
+    resolution: {integrity: sha512-ZF45T785ru8OwvYZw6awD9Z76OwSMM1eZzj2eY+FDz1cHfkpLjxEiti2iIH1FxbyK7n9ZqDUx29lVlCv238YyQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/types': 2.1.0
       tslib: 2.5.0
 
   /@aws-sdk/middleware-retry@3.287.0:
@@ -1745,6 +3336,17 @@ packages:
       '@aws-sdk/util-arn-parser': 3.208.0
       tslib: 2.5.0
 
+  /@aws-sdk/middleware-sdk-sqs@3.378.0:
+    resolution: {integrity: sha512-aQxLERU6GDNQipvc+H3LwcR/jUOTAtVvh4xhWEDkKfKnh+CvyXvcs7bsRuvmSYazx5eo7KFIscpFiEKz+LedKw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@smithy/types': 2.0.2
+      '@smithy/util-hex-encoding': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      tslib: 2.5.0
+    dev: false
+
   /@aws-sdk/middleware-sdk-sts@3.282.0:
     resolution: {integrity: sha512-Qe20mtJcF6lxt7280FhTFD2IpBDn39MEXmbm/zIkXR2/cAmvji8YhcxhNrq1l7XiuMM6SokBDC/f3dlF1oOC6g==}
     engines: {node: '>=14.0.0'}
@@ -1770,6 +3372,24 @@ packages:
     dependencies:
       '@aws-sdk/middleware-signing': 3.347.0
       '@aws-sdk/types': 3.347.0
+      tslib: 2.5.0
+
+  /@aws-sdk/middleware-sdk-sts@3.379.1:
+    resolution: {integrity: sha512-SK3gSyT0XbLiY12+AjLFYL9YngxOXHnZF3Z33Cdd4a+AUYrVBV7JBEEGD1Nlwrcmko+3XgaKlmgUaR5s91MYvg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/middleware-signing': 3.379.1
+      '@aws-sdk/types': 3.378.0
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@aws-sdk/middleware-sdk-sts@3.387.0:
+    resolution: {integrity: sha512-7ZzRKOJ4V/JDQmKz9z+FjZqw59mrMATEMLR6ff0H0JHMX0Uk5IX8TQB058ss+ar14qeJ4UcteYzCqHNI0O1BHw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/middleware-signing': 3.387.0
+      '@aws-sdk/types': 3.387.0
+      '@smithy/types': 2.1.0
       tslib: 2.5.0
 
   /@aws-sdk/middleware-serde@3.272.0:
@@ -1826,6 +3446,30 @@ packages:
       '@aws-sdk/util-middleware': 3.347.0
       tslib: 2.5.0
 
+  /@aws-sdk/middleware-signing@3.379.1:
+    resolution: {integrity: sha512-kBk2ZUvR84EM4fICjr8K+Ykpf8SI1UzzPp2/UVYZ0X+4H/ZCjfSqohGRwHykMqeplne9qHSL7/rGJs1H3l3gPg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/signature-v4': 2.0.1
+      '@smithy/types': 2.0.2
+      '@smithy/util-middleware': 2.0.0
+      tslib: 2.5.0
+
+  /@aws-sdk/middleware-signing@3.387.0:
+    resolution: {integrity: sha512-oJXlE0MES8gxNLo137PPNNiOICQGOaETTvq3kBSJgb/gtEAxQajMIlaNT7s1wsjOAruFHt4975nCXuY4lpx7GQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/signature-v4': 2.0.1
+      '@smithy/types': 2.1.0
+      '@smithy/util-middleware': 2.0.0
+      tslib: 2.5.0
+
   /@aws-sdk/middleware-ssec@3.272.0:
     resolution: {integrity: sha512-WDPcNPkscTmJUzdAvfx8p+YuUn2YR9ocmZA7yYUJ5kA94MyGH6Rbjp8tleWwQvah/HweeCQrYUzJk9wsH64LPA==}
     engines: {node: '>=14.0.0'}
@@ -1875,6 +3519,26 @@ packages:
       '@aws-sdk/protocol-http': 3.347.0
       '@aws-sdk/types': 3.347.0
       '@aws-sdk/util-endpoints': 3.347.0
+      tslib: 2.5.0
+
+  /@aws-sdk/middleware-user-agent@3.379.1:
+    resolution: {integrity: sha512-4zIGeAIuutcRieAvovs82uBNhJBHuxfxaAUqrKiw49xUBG7xeNVUl+DYPSpbALbEIy4ujfwWCBOOWVCt6dyUZg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@aws-sdk/util-endpoints': 3.378.0
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@aws-sdk/middleware-user-agent@3.387.0:
+    resolution: {integrity: sha512-hTfFTwDtp86xS98BKa+RFuLfcvGftxwzrbZeisZV8hdb4ZhvNXjSxnvM3vetW0GUEnY9xHPSGyp2ERRTinPKFQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      '@aws-sdk/util-endpoints': 3.387.0
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/types': 2.1.0
       tslib: 2.5.0
 
   /@aws-sdk/node-config-provider@3.287.0:
@@ -2200,6 +3864,61 @@ packages:
     transitivePeerDependencies:
       - aws-crt
 
+  /@aws-sdk/token-providers@3.379.1:
+    resolution: {integrity: sha512-NlYPkArJ7A/txCrjqqkje+4hsv7pSOqm+Qdx3BUIOc7PRYrBVs/XwThxUkGceSntVXoNlO8g9DFL0NY53/wb8Q==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/client-sso-oidc': 3.379.1
+      '@aws-sdk/types': 3.378.0
+      '@smithy/property-provider': 2.0.1
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
+  /@aws-sdk/token-providers@3.388.0:
+    resolution: {integrity: sha512-2lo1gFJl624kfjo/YdU6zW+k6dEwhoqjNkDNbOZEFgS1KDofHe9GX8W4/ReKb0Ggho5/EcjzZ53/1CjkzUq4tA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-crypto/sha256-browser': 3.0.0
+      '@aws-crypto/sha256-js': 3.0.0
+      '@aws-sdk/middleware-host-header': 3.387.0
+      '@aws-sdk/middleware-logger': 3.387.0
+      '@aws-sdk/middleware-recursion-detection': 3.387.0
+      '@aws-sdk/middleware-user-agent': 3.387.0
+      '@aws-sdk/types': 3.387.0
+      '@aws-sdk/util-endpoints': 3.387.0
+      '@aws-sdk/util-user-agent-browser': 3.387.0
+      '@aws-sdk/util-user-agent-node': 3.387.0
+      '@smithy/config-resolver': 2.0.2
+      '@smithy/fetch-http-handler': 2.0.2
+      '@smithy/hash-node': 2.0.2
+      '@smithy/invalid-dependency': 2.0.2
+      '@smithy/middleware-content-length': 2.0.2
+      '@smithy/middleware-endpoint': 2.0.2
+      '@smithy/middleware-retry': 2.0.2
+      '@smithy/middleware-serde': 2.0.2
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/node-config-provider': 2.0.2
+      '@smithy/node-http-handler': 2.0.2
+      '@smithy/property-provider': 2.0.1
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/smithy-client': 2.0.2
+      '@smithy/types': 2.1.0
+      '@smithy/url-parser': 2.0.2
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-body-length-browser': 2.0.0
+      '@smithy/util-body-length-node': 2.0.0
+      '@smithy/util-defaults-mode-browser': 2.0.2
+      '@smithy/util-defaults-mode-node': 2.0.2
+      '@smithy/util-retry': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - aws-crt
+
   /@aws-sdk/types@3.272.0:
     resolution: {integrity: sha512-MmmL6vxMGP5Bsi+4wRx4mxYlU/LX6M0noOXrDh/x5FfG7/4ZOar/nDxqDadhJtNM88cuWVHZWY59P54JzkGWmA==}
     engines: {node: '>=14.0.0'}
@@ -2216,6 +3935,20 @@ packages:
     resolution: {integrity: sha512-GkCMy79mdjU9OTIe5KT58fI/6uqdf8UmMdWqVHmFJ+UpEzOci7L/uw4sOXWo7xpPzLs6cJ7s5ouGZW4GRPmHFA==}
     engines: {node: '>=14.0.0'}
     dependencies:
+      tslib: 2.5.0
+
+  /@aws-sdk/types@3.378.0:
+    resolution: {integrity: sha512-qP0CvR/ItgktmN8YXpGQglzzR/6s0nrsQ4zIfx3HMwpsBTwuouYahcCtF1Vr82P4NFcoDA412EJahJ2pIqEd+w==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@aws-sdk/types@3.387.0:
+    resolution: {integrity: sha512-YTjFabNwjTF+6yl88f0/tWff018qmmgMmjlw45s6sdVKueWxdxV68U7gepNLF2nhaQPZa6FDOBoA51NaviVs0Q==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.1.0
       tslib: 2.5.0
 
   /@aws-sdk/url-parser@3.272.0:
@@ -2388,6 +4121,20 @@ packages:
       '@aws-sdk/types': 3.347.0
       tslib: 2.5.0
 
+  /@aws-sdk/util-endpoints@3.378.0:
+    resolution: {integrity: sha512-NU5C2l2xAXxpyB5nT0fIhahLPlJoJdzHWw4uC53KH9b4PrjHtgvgCN8beIsD3QxyfgeoM4A5J9Auo6WurfRnLw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      tslib: 2.5.0
+
+  /@aws-sdk/util-endpoints@3.387.0:
+    resolution: {integrity: sha512-g7kvuCXehGXHHBw9PkSQdwVyDFmNUZLmfrRmqMyrMDG9QLQrxr4pyWcSaYgTE16yUzhQQOR+QSey+BL6W9/N6g==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      tslib: 2.5.0
+
   /@aws-sdk/util-hex-encoding@3.201.0:
     resolution: {integrity: sha512-7t1vR1pVxKx0motd3X9rI3m/xNp78p3sHtP5yo4NP4ARpxyJ0fokBomY8ScaH2D/B+U5o9ARxldJUdMqyBlJcA==}
     engines: {node: '>=14.0.0'}
@@ -2497,6 +4244,22 @@ packages:
       bowser: 2.11.0
       tslib: 2.5.0
 
+  /@aws-sdk/util-user-agent-browser@3.378.0:
+    resolution: {integrity: sha512-FSCpagzftK1W+m7Ar6lpX7/Gr9y5P56nhFYz8U4EYQ4PkufS6czWX9YW+/FA5OYV0vlQ/SvPqMnzoHIPUNhZrQ==}
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@smithy/types': 2.0.2
+      bowser: 2.11.0
+      tslib: 2.5.0
+
+  /@aws-sdk/util-user-agent-browser@3.387.0:
+    resolution: {integrity: sha512-lpgSVvDqx+JjHZCTYs/yQSS7J71dPlJeAlvxc7bmx5m+vfwKe07HAnIs+929DngS0QbAp/VaXbTiMFsInLkO4Q==}
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      '@smithy/types': 2.1.0
+      bowser: 2.11.0
+      tslib: 2.5.0
+
   /@aws-sdk/util-user-agent-node@3.287.0:
     resolution: {integrity: sha512-yXg0C3WyxyRkQstR4VCTgnEPQd/ViRz+9rEPkYNIWXPvp1l8hPygk5q9tmSD09Lg8wzm6jR6V0MSyJnbwdzq+g==}
     engines: {node: '>=14.0.0'}
@@ -2534,6 +4297,34 @@ packages:
     dependencies:
       '@aws-sdk/node-config-provider': 3.347.0
       '@aws-sdk/types': 3.347.0
+      tslib: 2.5.0
+
+  /@aws-sdk/util-user-agent-node@3.378.0:
+    resolution: {integrity: sha512-IdwVJV0E96MkJeFte4dlWqvB+oiqCiZ5lOlheY3W9NynTuuX0GGYNC8Y9yIsV8Oava1+ujpJq0ww6qXdYxmO4A==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      aws-crt: '>=1.0.0'
+    peerDependenciesMeta:
+      aws-crt:
+        optional: true
+    dependencies:
+      '@aws-sdk/types': 3.378.0
+      '@smithy/node-config-provider': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@aws-sdk/util-user-agent-node@3.387.0:
+    resolution: {integrity: sha512-r9OVkcWpRYatjLhJacuHFgvO2T5s/Nu5DDbScMrkUD8b4aGIIqsrdZji0vZy9FCjsUFQMM92t9nt4SejrGjChA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      aws-crt: '>=1.0.0'
+    peerDependenciesMeta:
+      aws-crt:
+        optional: true
+    dependencies:
+      '@aws-sdk/types': 3.387.0
+      '@smithy/node-config-provider': 2.0.2
+      '@smithy/types': 2.1.0
       tslib: 2.5.0
 
   /@aws-sdk/util-utf8-browser@3.259.0:
@@ -3320,6 +5111,260 @@ packages:
       - debug
     dev: false
 
+  /@smithy/abort-controller@2.0.1:
+    resolution: {integrity: sha512-0s7XjIbsTwZyUW9OwXQ8J6x1UiA1TNCh60Vaw56nHahL7kUZsLhmTlWiaxfLkFtO2Utkj8YewcpHTYpxaTzO+w==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/abort-controller@2.0.2:
+    resolution: {integrity: sha512-ln5Cob0mksym62sLr7NiPOSqJ0jKao4qjfcNLDdgINM1lQI12hXrZBlKdPHbXJqpKhKiECDgonMoqCM8bigq4g==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/config-resolver@2.0.1:
+    resolution: {integrity: sha512-l83Pm7hV+8CBQOCmBRopWDtF+CURUJol7NsuPYvimiDhkC2F8Ba9T1imSFE+pD1UIJ9jlsDPAnZfPJT5cjnuEw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.0.2
+      '@smithy/util-config-provider': 2.0.0
+      '@smithy/util-middleware': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/config-resolver@2.0.2:
+    resolution: {integrity: sha512-0kdsqBL6BdmSbdU6YaDkodVBMua5MuQQluC3nocJ7OJ6PnOuM7i2FEQHE46LBadLqT+CimlDSM+6j91uHNL1ng==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.1.0
+      '@smithy/util-config-provider': 2.0.0
+      '@smithy/util-middleware': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/credential-provider-imds@2.0.1:
+    resolution: {integrity: sha512-8VxriuRINNEfVZjEFKBY75y9ZWAx73DZ5K/u+3LmB6r8WR2h3NaFxFKMlwlq0uzNdGhD1ouKBn9XWEGYHKiPLw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/node-config-provider': 2.0.1
+      '@smithy/property-provider': 2.0.1
+      '@smithy/types': 2.0.2
+      '@smithy/url-parser': 2.0.1
+      tslib: 2.5.0
+
+  /@smithy/credential-provider-imds@2.0.2:
+    resolution: {integrity: sha512-mbWFYEZ00LBRDk3WvcXViwpdpkJQcfrM3seuKzFxZnF6wIBLMwrcWcsj+OUC/1L+86m8aQY9imXMAaQsAoGxow==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/node-config-provider': 2.0.2
+      '@smithy/property-provider': 2.0.2
+      '@smithy/types': 2.1.0
+      '@smithy/url-parser': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/eventstream-codec@2.0.1:
+    resolution: {integrity: sha512-/IiNB7gQM2y2ZC/GAWOWDa8+iXfhr1g9Xe5979cQEOdCWDISvrAiv18cn3OtIQUhbYOR3gm7QtCpkq1to2takQ==}
+    dependencies:
+      '@aws-crypto/crc32': 3.0.0
+      '@smithy/types': 2.0.2
+      '@smithy/util-hex-encoding': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/fetch-http-handler@2.0.1:
+    resolution: {integrity: sha512-/SoU/ClazgcdOxgE4zA7RX8euiELwpsrKCSvulVQvu9zpmqJRyEJn8ZTWYFV17/eHOBdHTs9kqodhNhsNT+cUw==}
+    dependencies:
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/querystring-builder': 2.0.1
+      '@smithy/types': 2.0.2
+      '@smithy/util-base64': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/fetch-http-handler@2.0.2:
+    resolution: {integrity: sha512-Wo2m1RaiXNSLF4J3D62LpdSoj/YYb+6tn0H8is1tSrzr7eXAdiYVBc0wIa23N0wT4zmN0iG/yNY6gTCDQ6799A==}
+    dependencies:
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/querystring-builder': 2.0.2
+      '@smithy/types': 2.1.0
+      '@smithy/util-base64': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/hash-node@2.0.1:
+    resolution: {integrity: sha512-oTKYimQdF4psX54ZonpcIE+MXjMUWFxLCNosjPkJPFQ9whRX0K/PFX/+JZGRQh3zO9RlEOEUIbhy9NO+Wha6hw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.0.2
+      '@smithy/util-buffer-from': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/hash-node@2.0.2:
+    resolution: {integrity: sha512-JKDzZ1YVR7JzOBaJoWy3ToJCE86OQE6D4kOBvvVsu93a3lcF9kv6KYTKBYEWAjwOn/CpK4NH7mKB01OQ8H+aiA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.1.0
+      '@smithy/util-buffer-from': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/invalid-dependency@2.0.1:
+    resolution: {integrity: sha512-2q/Eb0AE662zwyMV+z+TL7deBwcHCgaZZGc0RItamBE8kak3MzCi/EZCNoFWoBfxgQ4jfR12wm8KKsSXhJzJtQ==}
+    dependencies:
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/invalid-dependency@2.0.2:
+    resolution: {integrity: sha512-inQZQ5gCO3WRWuXpsc1YJ4KBjsvj2qsoU32yTIKznBWTCQe/D5Dp+sSaysqBqxe0VTZ+8nFEHdUMWUX2BxQThw==}
+    dependencies:
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/is-array-buffer@2.0.0:
+    resolution: {integrity: sha512-z3PjFjMyZNI98JFRJi/U0nGoLWMSJlDjAW4QUX2WNZLas5C0CmVV6LJ01JI0k90l7FvpmixjWxPFmENSClQ7ug==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      tslib: 2.5.0
+
+  /@smithy/md5-js@2.0.1:
+    resolution: {integrity: sha512-8WWOtwWMmIDgTkRv1o3opy3ABsRXs4/XunETK53ckxQRAiOML1PlnqLBK9Uwk9bvOD6cpmsC6dioIfmKGpJ25w==}
+    dependencies:
+      '@smithy/types': 2.0.2
+      '@smithy/util-utf8': 2.0.0
+      tslib: 2.5.0
+    dev: false
+
+  /@smithy/middleware-content-length@2.0.1:
+    resolution: {integrity: sha512-IZhRSk5GkVBcrKaqPXddBS2uKhaqwBgaSgbBb1OJyGsKe7SxRFbclWS0LqOR9fKUkDl+3lL8E2ffpo6EQg0igw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/middleware-content-length@2.0.2:
+    resolution: {integrity: sha512-FmHlNfuvYgDZE3fIx0G3rD/wLXfAmBYE4mVc/w6d7RllA7TygPzq2pfHL1iCMzWkWTdoAVnt3h4aavAZnhaxEQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/middleware-endpoint@2.0.1:
+    resolution: {integrity: sha512-uz/KI1MBd9WHrrkVFZO4L4Wyv24raf0oR4EsOYEeG5jPJO5U+C7MZGLcMxX8gWERDn1sycBDqmGv8fjUMLxT6w==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/middleware-serde': 2.0.1
+      '@smithy/types': 2.0.2
+      '@smithy/url-parser': 2.0.1
+      '@smithy/util-middleware': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/middleware-endpoint@2.0.2:
+    resolution: {integrity: sha512-ropE7/c+g22QeluZ+By/B/WvVep0UFreX+IeRMGIO7EbOUPgqtJRXpbJFdG6JKB1uC+CdaJLn4MnZnVBpcyjuA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/middleware-serde': 2.0.2
+      '@smithy/types': 2.1.0
+      '@smithy/url-parser': 2.0.2
+      '@smithy/util-middleware': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/middleware-retry@2.0.1:
+    resolution: {integrity: sha512-NKHF4i0gjSyjO6C0ZyjEpNqzGgIu7s8HOK6oT/1Jqws2Q1GynR1xV8XTUs1gKXeaNRzbzKQRewHHmfPwZjOtHA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/service-error-classification': 2.0.0
+      '@smithy/types': 2.0.2
+      '@smithy/util-middleware': 2.0.0
+      '@smithy/util-retry': 2.0.0
+      tslib: 2.5.0
+      uuid: 8.3.2
+
+  /@smithy/middleware-retry@2.0.2:
+    resolution: {integrity: sha512-wtBUXqtZVriiXppYaFkUrybAPhFVX7vebnW/yVPliLMWMcguOMS58qhOYPZe3t9Wki2+mASfyu+kO3An8lAg2A==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/service-error-classification': 2.0.0
+      '@smithy/types': 2.1.0
+      '@smithy/util-middleware': 2.0.0
+      '@smithy/util-retry': 2.0.0
+      tslib: 2.5.0
+      uuid: 8.3.2
+
+  /@smithy/middleware-serde@2.0.1:
+    resolution: {integrity: sha512-uKxPaC6ItH9ZXdpdqNtf8sda7GcU4SPMp0tomq/5lUg9oiMa/Q7+kD35MUrpKaX3IVXVrwEtkjCU9dogZ/RAUA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/middleware-serde@2.0.2:
+    resolution: {integrity: sha512-Kw9xLdlueIaivUWslKB67WZ/cCUg3QnzYVIA3t5KfgsseEEuU4UxXw8NSTvIt71gqQloY+Um8ugS+idgxrWWnw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/middleware-stack@2.0.0:
+    resolution: {integrity: sha512-31XC1xNF65nlbc16yuh3wwTudmqs6qy4EseQUGF8A/p2m/5wdd/cnXJqpniy/XvXVwkHPz/GwV36HqzHtIKATQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      tslib: 2.5.0
+
+  /@smithy/node-config-provider@2.0.1:
+    resolution: {integrity: sha512-Zoel4CPkKRTQ2XxmozZUfqBYqjPKL53/SvTDhJHj+VBSiJy6MXRav1iDCyFPS92t40Uh+Yi+Km5Ch3hQ+c/zSA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/property-provider': 2.0.1
+      '@smithy/shared-ini-file-loader': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/node-config-provider@2.0.2:
+    resolution: {integrity: sha512-9wVJccASfuCctNWrzR0zrDkf0ox3HCHGEhFlWL2LBoghUYuK28pVRBbG69wvnkhlHnB8dDZHagxH+Nq9dm7eWw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/property-provider': 2.0.2
+      '@smithy/shared-ini-file-loader': 2.0.2
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/node-http-handler@2.0.1:
+    resolution: {integrity: sha512-Zv3fxk3p9tsmPT2CKMsbuwbbxnq2gzLDIulxv+yI6aE+02WPYorObbbe9gh7SW3weadMODL1vTfOoJ9yFypDzg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/abort-controller': 2.0.1
+      '@smithy/protocol-http': 2.0.1
+      '@smithy/querystring-builder': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/node-http-handler@2.0.2:
+    resolution: {integrity: sha512-lpZjmtmyZqSAtMPsbrLhb7XoAQ2kAHeuLY/csW6I2k+QyFvOk7cZeQsqEngWmZ9SJaeYiDCBINxAIM61i5WGLw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/abort-controller': 2.0.2
+      '@smithy/protocol-http': 2.0.2
+      '@smithy/querystring-builder': 2.0.2
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/property-provider@2.0.1:
+    resolution: {integrity: sha512-pmJRyY9SF6sutWIktIhe+bUdSQDxv/qZ4mYr3/u+u45riTPN7nmRxPo+e4sjWVoM0caKFjRSlj3tf5teRFy0Vg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/property-provider@2.0.2:
+    resolution: {integrity: sha512-DfaZ8cO+d/mgnMzIllcXcU4OYP+omiOl2LYdn/fTGpw/EAQSVzscYV2muV3sDDnuPYQ/r014hUqIxnF+pzh+SQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
   /@smithy/protocol-http@1.0.1:
     resolution: {integrity: sha512-9OrEn0WfOVtBNYJUjUAn9AOiJ4lzERCJJ/JeZs8E6yajTGxBaFRxUnNBHiNqoDJVg076hY36UmEnPx7xXrvUSg==}
     engines: {node: '>=14.0.0'}
@@ -3327,10 +5372,266 @@ packages:
       '@smithy/types': 1.0.0
       tslib: 2.5.0
 
+  /@smithy/protocol-http@2.0.1:
+    resolution: {integrity: sha512-mrkMAp0wtaDEIkgRObWYxI1Kun1tm6Iu6rK+X4utb6Ah7Uc3Kk4VIWwK/rBHdYGReiLIrxFCB1rq4a2gyZnSgg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/protocol-http@2.0.2:
+    resolution: {integrity: sha512-qWu8g1FUy+m36KpO1sREJSF7BaLmjw9AqOuwxLVVSdYz+nUQjc9tFAZ9LB6jJXKdsZFSjfkjHJBbhD78QdE7Rw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/querystring-builder@2.0.1:
+    resolution: {integrity: sha512-bp+93WFzx1FojVEIeFPtG0A1pKsFdCUcZvVdZdRlmNooOUrz9Mm9bneRd8hDwAQ37pxiZkCOxopSXXRQN10mYw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.0.2
+      '@smithy/util-uri-escape': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/querystring-builder@2.0.2:
+    resolution: {integrity: sha512-H99LOMWEssfwqkOoTs4Y12UiZ7CTGQSX5Nrx5UkYgRbUEpC1GnnaprHiYrqclC58/xr4K76aNchdPyioxewMzA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.1.0
+      '@smithy/util-uri-escape': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/querystring-parser@2.0.1:
+    resolution: {integrity: sha512-h+e7k1z+IvI2sSbUBG9Aq46JsgLl4UqIUl6aigAlRBj+P6ocNXpM6Yn1vMBw5ijtXeZbYpd1YvCxwDgdw3jhmg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/querystring-parser@2.0.2:
+    resolution: {integrity: sha512-L4VtKQ8O4/aWPQJbiFymbhAmxdfLnEaROh/Vs0OstJ7jtOZeBl2QJmuWY2V7hjt64W7V+tEn2sv6vVvnxkm/xQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/service-error-classification@2.0.0:
+    resolution: {integrity: sha512-2z5Nafy1O0cTf69wKyNjGW/sNVMiqDnb4jgwfMG8ye8KnFJ5qmJpDccwIbJNhXIfbsxTg9SEec2oe1cexhMJvw==}
+    engines: {node: '>=14.0.0'}
+
+  /@smithy/shared-ini-file-loader@2.0.1:
+    resolution: {integrity: sha512-a463YiZrPGvM+F336rIF8pLfQsHAdCRAn/BiI/EWzg5xLoxbC7GSxIgliDDXrOu0z8gT3nhVsif85eU6jyct3A==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/shared-ini-file-loader@2.0.2:
+    resolution: {integrity: sha512-2VkNOM/82u4vatVdK5nfusgGIlvR48Fkq6me17Oc+V1iyxfR/1x0pG6LzW0br1qlGtzBYFZKmDyviBRcPVFTVw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/signature-v4@2.0.1:
+    resolution: {integrity: sha512-jztv5Mirca42ilxmMDjzLdXcoAmRhZskGafGL49sRo5u7swEZcToEFrq6vtX5YMbSyTVrE9Teog5EFexY5Ff2Q==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/eventstream-codec': 2.0.1
+      '@smithy/is-array-buffer': 2.0.0
+      '@smithy/types': 2.0.2
+      '@smithy/util-hex-encoding': 2.0.0
+      '@smithy/util-middleware': 2.0.0
+      '@smithy/util-uri-escape': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/smithy-client@2.0.1:
+    resolution: {integrity: sha512-LHC5m6tYpEu1iNbONfvMbwtErboyTZJfEIPoD78Ei5MVr36vZQCaCla5mvo36+q/a2NAk2//fA5Rx3I1Kf7+lQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/types': 2.0.2
+      '@smithy/util-stream': 2.0.1
+      tslib: 2.5.0
+
+  /@smithy/smithy-client@2.0.2:
+    resolution: {integrity: sha512-mDfokI8WwLU5C0gcQ4ww/zJI/WLGSh2+vdIA42JRnjfYUjJNH/rKfX9YOnn2eBOxl3loATERVUqkHmKe+P8s2Q==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/middleware-stack': 2.0.0
+      '@smithy/types': 2.1.0
+      '@smithy/util-stream': 2.0.2
+      tslib: 2.5.0
+
   /@smithy/types@1.0.0:
     resolution: {integrity: sha512-kc1m5wPBHQCTixwuaOh9vnak/iJm21DrSf9UK6yDE5S3mQQ4u11pqAUiKWnlrZnYkeLfAI9UEHj9OaMT1v5Umg==}
     engines: {node: '>=14.0.0'}
     dependencies:
+      tslib: 2.5.0
+
+  /@smithy/types@2.0.2:
+    resolution: {integrity: sha512-wcymEjIXQ9+NEfE5Yt5TInAqe1o4n+Nh+rh00AwoazppmUt8tdo6URhc5gkDcOYrcvlDVAZE7uG69nDpEGUKxw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      tslib: 2.5.0
+
+  /@smithy/types@2.1.0:
+    resolution: {integrity: sha512-KLsCsqxX0j2l99iP8s0f7LBlcsp7a7ceXGn0LPYPyVOsqmIKvSaPQajq0YevlL4T9Bm+DtcyXfBTbtBcLX1I7A==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      tslib: 2.5.0
+
+  /@smithy/url-parser@2.0.1:
+    resolution: {integrity: sha512-NpHVOAwddo+OyyIoujDL9zGL96piHWrTNXqltWmBvlUoWgt1HPyBuKs6oHjioyFnNZXUqveTOkEEq0U5w6Uv8A==}
+    dependencies:
+      '@smithy/querystring-parser': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/url-parser@2.0.2:
+    resolution: {integrity: sha512-X1mHCzrSVDlhVy7d3S7Vq+dTfYzwh4n7xGHhyJumu77nJqIss0lazVug85Pwo0DKIoO314wAOvMnBxNYDa+7wA==}
+    dependencies:
+      '@smithy/querystring-parser': 2.0.2
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/util-base64@2.0.0:
+    resolution: {integrity: sha512-Zb1E4xx+m5Lud8bbeYi5FkcMJMnn+1WUnJF3qD7rAdXpaL7UjkFQLdmW5fHadoKbdHpwH9vSR8EyTJFHJs++tA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/util-buffer-from': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/util-body-length-browser@2.0.0:
+    resolution: {integrity: sha512-JdDuS4ircJt+FDnaQj88TzZY3+njZ6O+D3uakS32f2VNnDo3vyEuNdBOh/oFd8Df1zSZOuH1HEChk2AOYDezZg==}
+    dependencies:
+      tslib: 2.5.0
+
+  /@smithy/util-body-length-node@2.0.0:
+    resolution: {integrity: sha512-ZV7Z/WHTMxHJe/xL/56qZwSUcl63/5aaPAGjkfynJm4poILjdD4GmFI+V+YWabh2WJIjwTKZ5PNsuvPQKt93Mg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      tslib: 2.5.0
+
+  /@smithy/util-buffer-from@2.0.0:
+    resolution: {integrity: sha512-/YNnLoHsR+4W4Vf2wL5lGv0ksg8Bmk3GEGxn2vEQt52AQaPSCuaO5PM5VM7lP1K9qHRKHwrPGktqVoAHKWHxzw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/is-array-buffer': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/util-config-provider@2.0.0:
+    resolution: {integrity: sha512-xCQ6UapcIWKxXHEU4Mcs2s7LcFQRiU3XEluM2WcCjjBtQkUN71Tb+ydGmJFPxMUrW/GWMgQEEGipLym4XG0jZg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      tslib: 2.5.0
+
+  /@smithy/util-defaults-mode-browser@2.0.1:
+    resolution: {integrity: sha512-w72Qwsb+IaEYEFtYICn0Do42eFju78hTaBzzJfT107lFOPdbjWjKnFutV+6GL/nZd5HWXY7ccAKka++C3NrjHw==}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      '@smithy/property-provider': 2.0.1
+      '@smithy/types': 2.0.2
+      bowser: 2.11.0
+      tslib: 2.5.0
+
+  /@smithy/util-defaults-mode-browser@2.0.2:
+    resolution: {integrity: sha512-c2tMMjb624XLuzmlRoZpnFOkejVxcgw3WQKdmgdGZYZapcLzXyC0H9JhnXMjQCt30GqLTlsILRNVBYwFRbw/4Q==}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      '@smithy/property-provider': 2.0.2
+      '@smithy/types': 2.1.0
+      bowser: 2.11.0
+      tslib: 2.5.0
+
+  /@smithy/util-defaults-mode-node@2.0.1:
+    resolution: {integrity: sha512-dNF45caelEBambo0SgkzQ0v76m4YM+aFKZNTtSafy7P5dVF8TbjZuR2UX1A5gJABD9XK6lzN+v/9Yfzj/EDgGg==}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      '@smithy/config-resolver': 2.0.1
+      '@smithy/credential-provider-imds': 2.0.1
+      '@smithy/node-config-provider': 2.0.1
+      '@smithy/property-provider': 2.0.1
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+
+  /@smithy/util-defaults-mode-node@2.0.2:
+    resolution: {integrity: sha512-gt7m5LLqUtEKldJLyc14DE4kb85vxwomvt9AfEMEvWM4VwfWS1kGJqiStZFb5KNqnQPXw8vvpgLTi8NrWAOXqg==}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      '@smithy/config-resolver': 2.0.2
+      '@smithy/credential-provider-imds': 2.0.2
+      '@smithy/node-config-provider': 2.0.2
+      '@smithy/property-provider': 2.0.2
+      '@smithy/types': 2.1.0
+      tslib: 2.5.0
+
+  /@smithy/util-hex-encoding@2.0.0:
+    resolution: {integrity: sha512-c5xY+NUnFqG6d7HFh1IFfrm3mGl29lC+vF+geHv4ToiuJCBmIfzx6IeHLg+OgRdPFKDXIw6pvi+p3CsscaMcMA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      tslib: 2.5.0
+
+  /@smithy/util-middleware@2.0.0:
+    resolution: {integrity: sha512-eCWX4ECuDHn1wuyyDdGdUWnT4OGyIzV0LN1xRttBFMPI9Ff/4heSHVxneyiMtOB//zpXWCha1/SWHJOZstG7kA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      tslib: 2.5.0
+
+  /@smithy/util-retry@2.0.0:
+    resolution: {integrity: sha512-/dvJ8afrElasuiiIttRJeoS2sy8YXpksQwiM/TcepqdRVp7u4ejd9C4IQURHNjlfPUT7Y6lCDSa2zQJbdHhVTg==}
+    engines: {node: '>= 14.0.0'}
+    dependencies:
+      '@smithy/service-error-classification': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/util-stream@2.0.1:
+    resolution: {integrity: sha512-2a0IOtwIKC46EEo7E7cxDN8u2jwOiYYJqcFKA6rd5rdXqKakHT2Gc+AqHWngr0IEHUfW92zX12wRQKwyoqZf2Q==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/fetch-http-handler': 2.0.1
+      '@smithy/node-http-handler': 2.0.1
+      '@smithy/types': 2.0.2
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-buffer-from': 2.0.0
+      '@smithy/util-hex-encoding': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/util-stream@2.0.2:
+    resolution: {integrity: sha512-Mg9IJcKIu4YKlbzvpp1KLvh4JZLdcPgpxk+LICuDwzZCfxe47R9enVK8dNEiuyiIGK2ExbfvzCVT8IBru62vZw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/fetch-http-handler': 2.0.2
+      '@smithy/node-http-handler': 2.0.2
+      '@smithy/types': 2.1.0
+      '@smithy/util-base64': 2.0.0
+      '@smithy/util-buffer-from': 2.0.0
+      '@smithy/util-hex-encoding': 2.0.0
+      '@smithy/util-utf8': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/util-uri-escape@2.0.0:
+    resolution: {integrity: sha512-ebkxsqinSdEooQduuk9CbKcI+wheijxEb3utGXkCoYQkJnwTnLbH1JXGimJtUkQwNQbsbuYwG2+aFVyZf5TLaw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      tslib: 2.5.0
+
+  /@smithy/util-utf8@2.0.0:
+    resolution: {integrity: sha512-rctU1VkziY84n5OXe3bPNpKR001ZCME2JCaBBFgtiM2hfKbHFudc/BkMuPab8hRbLd0j3vbnBTTZ1igBf0wgiQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/util-buffer-from': 2.0.0
+      tslib: 2.5.0
+
+  /@smithy/util-waiter@2.0.2:
+    resolution: {integrity: sha512-7XCEVXDLguf3Og0NIF/KYEAHtrzNXmCdtEwMfOXr4iBKOUWYzNj91YB9O7tLrct8VGvysGA0x2xYzbxMbvF0QQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/abort-controller': 2.0.2
+      '@smithy/types': 2.1.0
       tslib: 2.5.0
 
   /@trpc/server@9.16.0:
@@ -4639,6 +6940,12 @@ packages:
 
   /fast-xml-parser@4.2.4:
     resolution: {integrity: sha512-fbfMDvgBNIdDJLdLOwacjFAPYt67tr31H9ZhWSm45CDAxvd0I6WTlSOUo7K2P/K5sA5JgMKG64PI3DMcaFdWpQ==}
+    hasBin: true
+    dependencies:
+      strnum: 1.0.5
+
+  /fast-xml-parser@4.2.5:
+    resolution: {integrity: sha512-B9/wizE4WngqQftFPmdaMYlXoJlJOYxGQOanC77fq9k8+Z0v5dDSVh+3glErdIROP//s/jgb7ZuxKfB8nVyo0g==}
     hasBin: true
     dependencies:
       strnum: 1.0.5
@@ -6093,8 +8400,8 @@ packages:
       - debug
     dev: false
 
-  /sst@2.22.6:
-    resolution: {integrity: sha512-zoaU1oEcKxs0c/85hsRWbKov3OPnmanRKxoLMsJ/8MxVwja6ypn3uSdTbMoSFyq6zzbhtkrT2RRRZdHAY85EVQ==}
+  /sst@2.23.15:
+    resolution: {integrity: sha512-wgZUvYXV1JMfRUF52kbS2d0AEkJrh2wLfjBhEX6J7hctOMwQVqMs5ehPCWNkl5cDra6ma7n8NKC5tnGd2nPYng==}
     hasBin: true
     peerDependencies:
       '@sls-next/lambda-at-edge': ^3.7.0
@@ -6108,7 +8415,9 @@ packages:
       '@aws-cdk/cloud-assembly-schema': 2.84.0
       '@aws-cdk/cloudformation-diff': 2.84.0
       '@aws-cdk/cx-api': 2.84.0(@aws-cdk/cloud-assembly-schema@2.84.0)
+      '@aws-crypto/sha256-js': 5.0.0
       '@aws-sdk/client-cloudformation': 3.287.0
+      '@aws-sdk/client-ecs': 3.388.0
       '@aws-sdk/client-eventbridge': 3.350.0(@aws-sdk/signature-v4-crt@3.282.0)
       '@aws-sdk/client-iam': 3.335.0
       '@aws-sdk/client-iot': 3.287.0
@@ -6117,16 +8426,17 @@ packages:
       '@aws-sdk/client-rds-data': 3.287.0
       '@aws-sdk/client-s3': 3.287.0(@aws-sdk/signature-v4-crt@3.282.0)
       '@aws-sdk/client-ssm': 3.287.0
-      '@aws-sdk/client-sts': 3.350.0
+      '@aws-sdk/client-sts': 3.379.1
       '@aws-sdk/config-resolver': 3.347.0
       '@aws-sdk/credential-providers': 3.287.0
       '@aws-sdk/middleware-retry': 3.347.0
-      '@aws-sdk/middleware-signing': 3.347.0
+      '@aws-sdk/middleware-signing': 3.379.1
       '@aws-sdk/signature-v4-crt': 3.282.0
       '@aws-sdk/smithy-client': 3.347.0
       '@babel/core': 7.21.0
       '@babel/generator': 7.21.1
       '@babel/plugin-syntax-typescript': 7.22.5(@babel/core@7.21.0)
+      '@smithy/signature-v4': 2.0.1
       '@trpc/server': 9.16.0
       adm-zip: 0.5.10
       aws-cdk-lib: 2.84.0(constructs@10.1.156)

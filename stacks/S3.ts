@@ -6,11 +6,11 @@ export function S3({stack, app}: StackContext) {
     const s3 = new Bucket(stack, "Bucket", {
         notifications: {
             myNotification1: {
-                function: "packages/functions/src/trigger.handler",
+                function: "packages/functions/src/eda/trigger1.handler",
                 events: ["object_created"],
             },
             myNotification2: {
-                function: "packages/functions/src/trigger.handler",
+                function: "packages/functions/src/eda/trigger1.handler",
                 events: ["object_removed"],
             },
         },
