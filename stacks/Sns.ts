@@ -1,7 +1,7 @@
 import {StackContext, Topic, use} from "sst/constructs";
 import {topicUrl} from "sst-helper";
 import {Sqs} from "./Sqs";
-import * as subscriptions from '@aws-cdk/aws-sns-subscriptions';
+
 export function Sns({stack, app}: StackContext) {
 
     const {queue} = use(Sqs);
