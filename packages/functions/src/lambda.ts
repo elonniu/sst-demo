@@ -9,7 +9,7 @@ export const handler = ApiHandler(async (event, context) => {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
         },
-        body: `Hello world2. The time is ${Time.now()}`,
+        body: `Hello world. The time is ${Time.now()}`,
         event
     };
 });
