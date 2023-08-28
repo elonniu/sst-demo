@@ -9,7 +9,7 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.111",
     "@types/node": "^18.15.2",
-    "sst": "2.24.16"
+    "sst": "2.24.17"
   },
   "dependencies": {
     "@aws-sdk/client-sns": "^3.379.1",
@@ -18,6 +18,6 @@
     "aws-xray-sdk": "^3.5.0",
     "axios": "^1.4.0",
     "ip": "^1.1.8",
-    "sst": "2.24.16"
+    "sst": "2.24.17"
   }
 }
