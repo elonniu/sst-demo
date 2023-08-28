@@ -1,6 +1,10 @@
 export async function handler(event: any, context: any) {
 
-    console.log('trigger1');
+    const {Records} = event;
 
-    return {}
+    for (const record of Records) {
+        console.log(record.body);
+    }
+
+    return {};
 }

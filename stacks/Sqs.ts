@@ -1,23 +1,29 @@
 import {Function, Queue, StackContext} from "sst/constructs";
 import {sqsUrl} from "../packages/lib/ResourceUrl";
 import * as lambdaEventSources from '@aws-cdk/aws-lambda-event-sources';
+import {Duration} from "aws-cdk-lib";
+import {lambdaUrl} from "sst-helper";
 
 export function Sqs({stack, app}: StackContext) {
 
     const queue = new Queue(stack, "Queue");
 
-    const fn1 = new Function(stack, "fn1", {
-        handler: "packages/functions/src/eda/trigger1.handler",
+    const IEventSource = new lambdaEventSources.SqsEventSource(queue.cdk.queue, {
+        batchSize: 1,
+        maxBatchingWindow: Duration.seconds(5),
+        enabled: true,
+        reportBatchItemFailures: false
     });
-    fn1.addEventSource(new lambdaEventSources.SqsEventSource(queue.cdk.queue));
 
-    const fn2 = new Function(stack, "fn2", {
-        handler: "packages/functions/src/eda/trigger2.handler",
+    const fun = new Function(stack, "fn1", {
+        handler: "packages/functions/src/eda/trigger1.handler",
+        reservedConcurrentExecutions: 1
     });
-    fn2.addEventSource(new lambdaEventSources.SqsEventSource(queue.cdk.queue));
+    fun.addEventSource(IEventSource);
 
     stack.addOutputs({
         url: sqsUrl(queue.queueName, app),
+        fun: lambdaUrl(fun, app),
     });
 
     return {queue};

@@ -3,7 +3,7 @@ import {Cron, StackContext} from "sst/constructs";
 export function Task({stack, app}: StackContext) {
 
     new Cron(stack, "CronJob", {
-        schedule: "rate(1 minute)",
+        schedule: "rate(5 minutes)",
         enabled: app.local,
         job: {
             function: {
